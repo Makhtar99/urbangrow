@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "name": "Basilic",
+    "scientificName": "Ocimum basilicum",
+    "image": "basil.jpg",
+    "description": "Le basilic est une herbe aromatique populaire et facile à cultiver sur un rebord de fenêtre ensoleillé ou un balcon.",
+    "sunlight": "Plein soleil",
+    "water": "Régulier, garder le sol légèrement humide",
+    "soil": "Bien drainé, riche en matière organique",
+    "care": "Pincez régulièrement les fleurs pour encourager la croissance des feuilles. Récoltez les feuilles du haut pour stimuler la plante."
+  },
+  {
+    "id": "2",
+    "name": "Tomate cerise",
+    "scientificName": "Solanum lycopersicum var. cerasiforme",
+    "image": "cherry-tomato.jpg",
+    "description": "Les tomates cerises sont parfaites pour les petits espaces et produisent abondamment de petits fruits sucrés.",
+    "sunlight": "Plein soleil, minimum 6 heures par jour",
+    "water": "Régulier, éviter de mouiller les feuilles",
+    "soil": "Riche et bien drainé",
+    "care": "Tuteurez les plants dès qu'ils atteignent 20 cm. Supprimez les gourmands pour une meilleure production."
+  },
+  {
+    "id": "3",
+    "name": "Menthe",
+    "scientificName": "Mentha spp.",
+    "image": "mint.jpg",
+    "description": "La menthe est une plante aromatique vigoureuse, idéale pour les débutants et parfaite en tisane ou cocktail.",
+    "sunlight": "Mi-ombre à plein soleil",
+    "water": "Régulier, garder le sol humide",
+    "soil": "Riche et humide",
+    "care": "Plantez-la dans un contenant séparé car elle est très envahissante. Récoltez régulièrement pour stimuler la croissance."
+  },
+  {
+    "id": "4",
+    "name": "Laitue",
+    "scientificName": "Lactuca sativa",
+    "image": "lettuce.jpg",
+    "description": "La laitue est facile à cultiver et peut être récoltée feuille par feuille pour une production continue.",
+    "sunlight": "Mi-ombre à soleil partiel",
+    "water": "Régulier, garder le sol humide mais non détrempé",
+    "soil": "Riche et bien drainé",
+    "care": "Récoltez les feuilles extérieures d'abord. Semez toutes les 2-3 semaines pour une récolte continue."
+  },
+  {
+    "id": "5",
+    "name": "Fraisier",
+    "scientificName": "Fragaria × ananassa",
+    "image": "strawberry.jpg",
+    "description": "Les fraisiers sont parfaits pour les jardinières suspendues et produisent des fruits délicieux au printemps et en été.",
+    "sunlight": "Plein soleil",
+    "water": "Régulier, sans mouiller les fruits",
+    "soil": "Riche et légèrement acide",
+    "care": "Enlevez les stolons pour concentrer l'énergie sur la production de fruits. Protégez les fruits du contact avec le sol."
+  },
+  {
+    "id": "6",
+    "name": "Persil",
+    "scientificName": "Petroselinum crispum",
+    "image": "parsley.jpg",
+    "description": "Le persil est une herbe biannuelle riche en vitamines et facile à cultiver en pot ou en pleine terre.",
+    "sunlight": "Mi-ombre à plein soleil",
+    "water": "Régulier, garder le sol légèrement humide",
+    "soil": "Riche et bien drainé",
+    "care": "Récoltez les tiges extérieures en premier. Coupez à la base pour encourager une nouvelle croissance."
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "name": "Jardin Communautaire des Lilas",
+    "address": "15 Rue des Fleurs, 75020 Paris",
+    "coordinates": {"lat": 48.8566, "lng": 2.3522},
+    "description": "Un espace convivial où les habitants du quartier cultivent ensemble légumes, fruits et fleurs dans une démarche écologique.",
+    "openHours": "Tous les jours de 8h à 20h",
+    "contact": "jardindeslias@example.com"
+  },
+  {
+    "id": "2",
+    "name": "Potager Urbain Collectif",
+    "address": "42 Avenue des Jardins, 69001 Lyon",
+    "coordinates": {"lat": 45.7578, "lng": 4.8320},
+    "description": "Créé en 2015, ce jardin partagé propose des parcelles individuelles et collectives, ainsi que des ateliers de jardinage.",
+    "openHours": "Du mardi au dimanche de 9h à 19h",
+    "contact": "potager.urbain@example.com"
+  },
+  {
+    "id": "3",
+    "name": "Les Jardins de la Solidarité",
+    "address": "8 Rue de l'Entraide, 33000 Bordeaux",
+    "coordinates": {"lat": 44.8378, "lng": -0.5792},
+    "description": "Un projet social qui permet aux personnes en situation précaire de cultiver leurs propres légumes et de créer du lien social.",
+    "openHours": "Lundi, mercredi et samedi de 10h à 17h",
+    "contact": "solidarite.jardins@example.com"
+  },
+  {
+    "id": "4",
+    "name": "Oasis Verte",
+    "address": "23 Boulevard de l'Écologie, 13001 Marseille",
+    "coordinates": {"lat": 43.2965, "lng": 5.3698},
+    "description": "Un espace vert au cœur de la ville qui propose des parcelles partagées et organise des événements autour de la permaculture.",
+    "openHours": "Tous les jours de 7h à 21h",
+    "contact": "oasis.verte@example.com"
+  },
+  {
+    "id": "5",
+    "name": "Jardin du Partage",
+    "address": "56 Rue des Semis, 59000 Lille",
+    "coordinates": {"lat": 50.6292, "lng": 3.0573},
+    "description": "Un jardin intergénérationnel où enfants, adultes et seniors jardinent ensemble et partagent leurs connaissances.",
+    "openHours": "Du mercredi au dimanche de 9h à 18h",
+    "contact": "jardin.partage@example.com"
+  }
+]
