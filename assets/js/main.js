@@ -49,7 +49,7 @@ function displayPlants(plants) {
         const plantItem = document.createElement('li');
         plantItem.innerHTML = `
             <a href="details.html?id=${plant.id}">
-                <img src="../assets/img/plants/${plant.image}" alt="${plant.name}">
+                <img src="../assets/img/plants/${plant.image}" alt="${plant.name}" aria-hidden="true">
                 <h3>${plant.name}</h3>
             </a>
         `;
@@ -82,7 +82,7 @@ function displayPlantDetails(plant) {
     detailsContainer.innerHTML = `
         <h2>${plant.name}</h2>
         <img src="../assets/img/plants/${plant.image}" alt="${plant.name}">
-        <p class="plant-scientific-name">${plant.scientificName}</p>
+        <p class="plant-scientific-name" aria-hidden="true" >${plant.scientificName}</p>
         <div class="plant-info">
             <h3>Description</h3>
             <p>${plant.description}</p>
