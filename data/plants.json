@@ -3,66 +3,108 @@
     "id": "1",
     "name": "Basilic",
     "scientificName": "Ocimum basilicum",
+    "category": "Aromatique",
     "image": "basil.jpg",
-    "description": "Le basilic est une herbe aromatique populaire et facile à cultiver sur un rebord de fenêtre ensoleillé ou un balcon.",
+    "description": "Le basilic est une herbe aromatique facile à cultiver, parfaite pour parfumer les plats méditerranéens.",
     "sunlight": "Plein soleil",
     "water": "Régulier, garder le sol légèrement humide",
     "soil": "Bien drainé, riche en matière organique",
-    "care": "Pincez régulièrement les fleurs pour encourager la croissance des feuilles. Récoltez les feuilles du haut pour stimuler la plante."
+    "care": "Pincez les fleurs pour favoriser la croissance des feuilles."
   },
   {
     "id": "2",
     "name": "Tomate cerise",
     "scientificName": "Solanum lycopersicum var. cerasiforme",
+    "category": "Fruits",
     "image": "cherry-tomato.jpg",
-    "description": "Les tomates cerises sont parfaites pour les petits espaces et produisent abondamment de petits fruits sucrés.",
-    "sunlight": "Plein soleil, minimum 6 heures par jour",
+    "description": "Parfaites pour les petits espaces, les tomates cerises produisent de délicieux petits fruits.",
+    "sunlight": "Plein soleil, minimum 6h/jour",
     "water": "Régulier, éviter de mouiller les feuilles",
     "soil": "Riche et bien drainé",
-    "care": "Tuteurez les plants dès qu'ils atteignent 20 cm. Supprimez les gourmands pour une meilleure production."
+    "care": "Tuteurez les plants et supprimez les gourmands."
   },
   {
     "id": "3",
     "name": "Menthe",
     "scientificName": "Mentha spp.",
+    "category": "Aromatique",
     "image": "mint.jpg",
-    "description": "La menthe est une plante aromatique vigoureuse, idéale pour les débutants et parfaite en tisane ou cocktail.",
+    "description": "La menthe est vigoureuse et idéale pour les boissons ou desserts. Attention à son expansion rapide.",
     "sunlight": "Mi-ombre à plein soleil",
     "water": "Régulier, garder le sol humide",
     "soil": "Riche et humide",
-    "care": "Plantez-la dans un contenant séparé car elle est très envahissante. Récoltez régulièrement pour stimuler la croissance."
+    "care": "Cultivez en pot pour contrôler sa croissance."
   },
   {
     "id": "4",
     "name": "Laitue",
     "scientificName": "Lactuca sativa",
-    "image": "lettuce.jpg",
-    "description": "La laitue est facile à cultiver et peut être récoltée feuille par feuille pour une production continue.",
+    "category": "Feuilles comestibles",
+    "image": "lettuce.png",
+    "description": "Facile à cultiver, la laitue offre une récolte régulière en coupant les feuilles extérieures.",
     "sunlight": "Mi-ombre à soleil partiel",
-    "water": "Régulier, garder le sol humide mais non détrempé",
+    "water": "Régulier, garder le sol humide mais pas détrempé",
     "soil": "Riche et bien drainé",
-    "care": "Récoltez les feuilles extérieures d'abord. Semez toutes les 2-3 semaines pour une récolte continue."
+    "care": "Semez toutes les 2-3 semaines pour des récoltes continues."
   },
   {
     "id": "5",
     "name": "Fraisier",
     "scientificName": "Fragaria × ananassa",
+    "category": "Fruits",
     "image": "strawberry.jpg",
-    "description": "Les fraisiers sont parfaits pour les jardinières suspendues et produisent des fruits délicieux au printemps et en été.",
+    "description": "Les fraisiers produisent des fruits savoureux et sont adaptés aux jardinières suspendues.",
     "sunlight": "Plein soleil",
     "water": "Régulier, sans mouiller les fruits",
     "soil": "Riche et légèrement acide",
-    "care": "Enlevez les stolons pour concentrer l'énergie sur la production de fruits. Protégez les fruits du contact avec le sol."
+    "care": "Retirez les stolons pour privilégier la production de fruits."
   },
   {
     "id": "6",
     "name": "Persil",
     "scientificName": "Petroselinum crispum",
+    "category": "Aromatique",
     "image": "parsley.jpg",
-    "description": "Le persil est une herbe biannuelle riche en vitamines et facile à cultiver en pot ou en pleine terre.",
+    "description": "Le persil est une herbe riche en vitamines, idéale en pot comme en pleine terre.",
     "sunlight": "Mi-ombre à plein soleil",
     "water": "Régulier, garder le sol légèrement humide",
     "soil": "Riche et bien drainé",
-    "care": "Récoltez les tiges extérieures en premier. Coupez à la base pour encourager une nouvelle croissance."
+    "care": "Récoltez les tiges extérieures à la base pour stimuler la croissance."
+  },
+  {
+    "id": "7",
+    "name": "Radis",
+    "scientificName": "Raphanus sativus",
+    "category": "Légumes",
+    "image": "radish.jpg",
+    "description": "Les radis poussent rapidement et sont idéaux pour les débutants. Idéal en balconnière.",
+    "sunlight": "Soleil à mi-ombre",
+    "water": "Arrosage fréquent mais léger",
+    "soil": "Léger et bien drainé",
+    "care": "Semez régulièrement pour une récolte échelonnée."
+  },
+  {
+    "id": "8",
+    "name": "Lavande",
+    "scientificName": "Lavandula angustifolia",
+    "category": "Ornementale",
+    "image": "lavender.jpg",
+    "description": "Plante aromatique et décorative, la lavande attire les pollinisateurs et parfume le jardin.",
+    "sunlight": "Plein soleil",
+    "water": "Modéré, supporte la sécheresse",
+    "soil": "Sec, calcaire, bien drainé",
+    "care": "Taillez après floraison pour garder un port compact."
+  },
+  {
+    "id": "9",
+    "name": "Ciboulette",
+    "scientificName": "Allium schoenoprasum",
+    "category": "Aromatique",
+    "image": "chives.jpg",
+    "description": "La ciboulette est une herbe vivace idéale en pot, au goût fin et aux fleurs comestibles.",
+    "sunlight": "Soleil ou mi-ombre",
+    "water": "Sol frais, arrosage modéré",
+    "soil": "Léger et humifère",
+    "care": "Coupez régulièrement pour stimuler la croissance."
   }
 ]

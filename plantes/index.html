@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../assets/css/print.css" media="print">
 </head>
 <body>
-    <header style="display: flex; justify-content: space-between; align-items: center; ">
+    <header style="display: flex; justify-content: space-between; align-items: center;">
         <h1>UrbanGrow</h1>
         <nav>
             <ul>
@@ -22,14 +22,72 @@
     </header>
     <main>
         <h2>Liste des plantes</h2>
-        <div id="plants-list">
-            <!-- La liste des plantes sera générée dynamiquement ici -->
+        <div class="search-filter">
+            <input type="text" id="search-input" placeholder="Rechercher une plante..." aria-label="Rechercher une plante">
+            <select id="filter-select" aria-label="Filtrer par type">
+                <option value="">Tous les types</option>
+                <option value="aromatique">Aromatique</option>
+                <option value="médicinale">Médicinale</option>
+                <option value="potagère">Potagère</option>
+            </select>
         </div>
+        <ul id="plants-list" class="plants-grid">
+            <!-- Cartes des plantes insérées dynamiquement -->
+        </ul>
     </main>
     <footer>
         <p>&copy; 2025 UrbanGrow</p>
         <a href="../accessibility.html">Accessibilité</a>
     </footer>
     <script src="../assets/js/main.js"></script>
+    <script>
+
+    const categories = ["Aromatique", "Fruits", "Légumes", "Feuilles comestibles", "Ornementale"];
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('search-input');
+        const filterSelect = document.getElementById('filter-select');
+        const plantsList = document.getElementById('plants-list');
+
+        let allPlants = [];
+
+        async function fetchPlants() {
+            const response = await fetch('../data/plants.json');
+            allPlants = await response.json();
+            displayPlants(allPlants);
+        }
+
+        function displayPlants(plants) {
+            plantsList.innerHTML = '';
+            plants.forEach(plant => {
+                const li = document.createElement('li');
+                li.className = 'plant-card';
+                li.innerHTML = `
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="../assets/img/plants/${plant.image}" alt="${plant.name}">
+                    <h3>${plant.name}</h3>
+                </div>
+                `;
+                plantsList.appendChild(li);
+            });
+        }
+
+        function filterPlants() {
+            const query = searchInput.value.toLowerCase();
+            const type = filterSelect.value;
+            const filtered = allPlants.filter(plant => {
+                const matchesSearch = plant.name.toLowerCase().includes(query);
+                const matchesFilter = type === '' || plant.type === type;
+                return matchesSearch && matchesFilter;
+            });
+            displayPlants(filtered);
+        }
+
+        searchInput.addEventListener('input', filterPlants);
+        filterSelect.addEventListener('change', filterPlants);
+
+        fetchPlants();
+    });
+    </script>
 </body>
 </html>
