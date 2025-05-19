@@ -5,7 +5,7 @@
     --color-accent: #fefee3;
     --color-dark: #183a37;
     --color-light: #fefefe;
-    --color-background: #F7FAF0;
+    --color-background: #FFF;
     --font-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -166,8 +166,8 @@ footer {
 }
 
 .plant-card img {
-    width: 100%;
-    height: auto;
+    width: 200px;
+    height: 200px;
     display: block;
 }
 
@@ -189,3 +189,56 @@ footer {
     outline: 3px solid var(--color-secondary);
     outline-offset: 2px;
 }
+
+.plant-link:focus,
+.plant-link:hover {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+
+/* details */
+
+    #plant-details {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fefee3;
+      border: 2px solid var(--color-primary);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    #plant-details img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+    #plant-details h2 {
+      font-size: 2rem;
+      color: var(--color-primary);
+      margin-bottom: 0.5rem;
+    }
+    #plant-details .plant-scientific-name {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    #plant-details .plant-category {
+      background-color: var(--color-secondary);
+      color: white;
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    #plant-details .plant-info h3 {
+      margin-top: 1.5rem;
+      color: var(--color-dark);
+      font-size: 1.25rem;
+    }
+    #plant-details .plant-info p,
+    #plant-details .plant-info ul {
+      margin-bottom: 1rem;
+    }

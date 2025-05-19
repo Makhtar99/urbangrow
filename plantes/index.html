@@ -10,7 +10,7 @@
 </head>
 <body>
     <header style="display: flex; justify-content: space-between; align-items: center;">
-        <h1>UrbanGrow</h1>
+        <img src="../assets/img/logo.png" alt="Logo UrbanGrow" style="width: 100px; height: auto;" loading="lazy">
         <nav>
             <ul>
                 <li><a href="../index.html">Accueil</a></li>
@@ -22,7 +22,7 @@
     </header>
     <main>
         <h2>Liste des plantes</h2>
-        <div class="search-filter">
+        <div class="search-filter" style="display: flex; justify-content: space-between; align-items: center; gap: 20px ">
             <input type="text" id="search-input" placeholder="Rechercher une plante..." aria-label="Rechercher une plante">
             <select id="filter-select" aria-label="Filtrer par type">
                 <option value="">Tous les types</option>
@@ -64,8 +64,10 @@
                 li.className = 'plant-card';
                 li.innerHTML = `
                 <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src="../assets/img/plants/${plant.image}" alt="${plant.name}">
+                    <a href="details.html?id=${plant.id}">
+                    <img src="../assets/img/plants/${plant.image}" alt="${plant.name}" loading="lazy">
                     <h3>${plant.name}</h3>
+                    </a>
                 </div>
                 `;
                 plantsList.appendChild(li);

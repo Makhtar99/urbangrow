@@ -49,7 +49,7 @@ function displayPlants(plants) {
         const plantItem = document.createElement('li');
         plantItem.innerHTML = `
             <a href="details.html?id=${plant.id}">
-                <img src="../assets/img/plants/${plant.image}" alt="${plant.name}" aria-hidden="true">
+                <img src="../assets/img/plants/${plant.image}" alt="${plant.name}" aria-hidden="true" loa>
                 <h3>${plant.name}</h3>
             </a>
         `;
@@ -75,25 +75,40 @@ async function fetchPlantDetails(plantId) {
 }
 
 // Display plant details
+function displayPlants(plants) {
+    plantsList.innerHTML = '';
+    plants.forEach(plant => {
+        const li = document.createElement('li');
+        li.className = 'plant-card';
+        li.innerHTML = `
+            <a href="details.html?id=${plant.id}" class="plant-link" style="display: flex; flex-direction: column; align-items: center; text-decoration: none;">
+                <img src="../assets/img/plants/${plant.image}" alt="${plant.name}">
+                <h3>${plant.name}</h3>
+            </a>
+        `;
+        plantsList.appendChild(li);
+    });
+}
+
 function displayPlantDetails(plant) {
     const detailsContainer = document.getElementById('plant-details');
     if (!detailsContainer) return;
-    
+
     detailsContainer.innerHTML = `
         <h2>${plant.name}</h2>
-        <img src="../assets/img/plants/${plant.image}" alt="${plant.name}">
-        <p class="plant-scientific-name" aria-hidden="true" >${plant.scientificName}</p>
+        <img src="../assets/img/plants/${plant.image}" alt="${plant.name}" style="max-width: 100%; height: auto;">
+        <p class="plant-scientific-name">${plant.scientificName}</p>
         <div class="plant-info">
             <h3>Description</h3>
             <p>${plant.description}</p>
-            
+
             <h3>Conditions de culture</h3>
             <ul>
                 <li><strong>Soleil :</strong> ${plant.sunlight}</li>
                 <li><strong>Eau :</strong> ${plant.water}</li>
                 <li><strong>Type de sol :</strong> ${plant.soil}</li>
             </ul>
-            
+
             <h3>Conseils d'entretien</h3>
             <p>${plant.care}</p>
         </div>
