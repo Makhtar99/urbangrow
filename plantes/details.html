@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -8,28 +9,65 @@
   <link rel="stylesheet" href="../assets/css/print.css" media="print">
 </head>
 <body>
-    <header>
-        <h1>UrbanGrow</h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="index.html">Plantes</a></li>
-                <li><a href="../jardins/index.html">Jardins</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <article id="plant-details">
-            <!-- Les détails de la plante seront générés dynamiquement ici -->
-        </article>
-    </main>
-    <footer>
-        <p>&copy; 2025 UrbanGrow</p>
-        <a href="../accessibility.html">Accessibilité</a>
-    </footer>
-    <script src="../assets/js/main.js"></script>
+  <header style="display: flex; justify-content: space-between; align-items: center;">
+    <img src="../assets/img/logo.png" alt="Logo UrbanGrow" style="width: 100px; height: 100px;" loading="lazy">
+    <nav>
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="index.html">Plantes</a></li>
+        <li><a href="../jardins/index.html">Jardins</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article id="plant-details">
+      <!-- Contenu injecté dynamiquement -->
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 UrbanGrow</p>
+    <a href="../accessibility.html">Accessibilité</a>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const plantId = urlParams.get('id');
+      if (!plantId) return;
+
+      const res = await fetch('../data/plants.json');
+      const plants = await res.json();
+      const plant = plants.find(p => p.id === plantId);
+      if (!plant) return;
+
+      const container = document.getElementById('plant-details');
+      container.innerHTML = `
+      <div style="display: flex;">
+        <div style="display: flex; flex-direction: column; text-align: left;">
+        <h2>${plant.name}</h2>
+        <em>${plant.scientificName}</em>
+        <p><strong>Catégorie :</strong> ${plant.category}</p>
+        <p><strong>Saison :</strong> ${plant.season}</p>
+        <p><strong>Origine :</strong> ${plant.origin}</p>
+        <p><strong>Exposition :</strong> ${plant.sunlight}</p>
+        <p><strong>Température idéale :</strong> ${plant.temperature}</p>
+        <p><strong>Besoins en eau :</strong> ${plant.waterNeeds}</p>
+        <p><strong>Difficulté :</strong> ${plant.difficulty}</p>
+        <p><strong>Temps de pousse :</strong> ${plant.growTime}</p>
+        <p><strong>Arrosage :</strong> ${plant.wateringFrequency} fois/semaine</p>
+        <p><strong>Culture :</strong> ${plant.growPlace}</p>
+        <p><strong>Comestible :</strong> ${plant.edible ? "Oui" : "Non"}</p>
+        <p><strong>Conseils :</strong> ${plant.care}</p>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <img src="../assets/img/plants/${plant.image}" alt="${plant.name}" style="width: 300px; height: auto; border-radius: 10px;">
+        </div>
+      </div>
+      `;
+    });
+  </script>
 </body>
-
-
 </html>
