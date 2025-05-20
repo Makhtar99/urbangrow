@@ -35,207 +35,397 @@
   </style>
 </head>
 <body>
-  <header style="display: flex; justify-content: space-between; align-items: center;">
-    <img src="../assets/img/logo.webp" alt="Logo UrbanGrow" style="width: 100px; height: 100px;" loading="lazy" />
-    <nav>
-      <ul>
-        <li><a href="../index.html">Accueil</a></li>
-        <li><a href="index.html">Plantes</a></li>
-        <li><a href="../jardins/index.html">Jardins</a></li>
-        <li><a href="../contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header style="display: flex; justify-content: space-between; align-items: center;">
+        <img src="../assets/img/logo.webp" alt="Logo UrbanGrow" style="width: 100px; height: auto;" loading="lazy">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="index.html" aria-current="page">Plantes</a></li>
+                <li><a href="../jardins/index.html">Jardins</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Liste des plantes</h2>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <input type="text" id="search-input" placeholder="Rechercher une plante..." aria-label="Rechercher une plante">
+            <div class="search-filter" style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap; ">
+            
+                <select id="filter-select" aria-label="Filtrer par catégorie">
+                <option value="">Toutes les catégories</option>
+                <option value="Aromatique">Aromatique</option>
+                <option value="Fruits">Fruits</option>
+                <option value="Légumes">Légumes</option>
+                <option value="Feuilles comestibles">Feuilles comestibles</option>
+                <option value="Ornementale">Ornementale</option>
+                <option value="Médicinale">Médicinale</option>
+            </select>
+            <select id="season-select" aria-label="Filtrer par saison">
+                <option value="">Toutes les saisons</option>
+                <option value="Printemps">Printemps</option>
+                <option value="Été">Été</option>
+                <option value="Automne">Automne</option>
+                <option value="Hiver">Hiver</option>
+            </select>
+            <select id="difficulty-select" aria-label="Filtrer par difficulté">
+                <option value="">Toutes les difficultés</option>
+                <option value="Facile">Facile</option>
+                <option value="Intermédiaire">Intermédiaire</option>
+                <option value="Difficile">Difficile</option>
+            </select>
+            <select id="water-select" aria-label="Filtrer par besoins en eau">
+                <option value="">Tous les besoins en eau</option>
+                <option value="Faible">Faible</option>
+                <option value="Moyen">Moyen</option>
+                <option value="Élevé">Élevé</option>
+            </select>
+            <select id="sunlight-select" aria-label="Filtrer par exposition">
+                <option value="">Toutes les expositions</option>
+                <option value="Plein soleil">Plein soleil</option>
+                <option value="Mi-ombre">Mi-ombre</option>
+                <option value="Ombre">Ombre</option>
+            </select>
+            <select id="temperature-select" aria-label="Filtrer par température">
+                <option value="">Toutes les températures</option>
+                <option value="Froide">Froide</option>
+                <option value="Tempérée">Tempérée</option>
+                <option value="Chauffée">Chauffée</option>
+            </select>
+            <select id="growplace-select" aria-label="Filtrer par lieu de culture">
+                <option value="">Tous les lieux de culture</option>
+                <option value="Balcon">Balcon</option>
+                <option value="Jardin">Jardin</option>
+                <option value="Les deux">Les deux</option>
+            </select>
+            <select id="edible-select" aria-label="Filtrer par comestibilité">
+                <option value="">Tous les types</option>
+                <option value="Comestible">Comestible</option>
+                <option value="Non comestible">Non comestible</option>
+            </select>
+            <select id="wateringFrequency-select" aria-label="Filtrer par fréquence d'arrosage">
+                <option value="">Toutes les fréquences</option>
+                <option value="1 fois/semaine">1 fois/semaine</option>
+                <option value="2 fois/semaine">2 fois/semaine</option>
+                <option value="3 fois/semaine">3 fois/semaine</option>
+                <option value="4 fois/semaine">4 fois/semaine</option>
+            </select>
+            <button id="reset-button" aria-label="Réinitialiser les filtres" style="background-color: var(--color-primary); color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px;">Réinitialiser</button>
+        </div>
+        </div>
+        
+        
+<section id="plant-list">
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=1" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Basilic</h3>
+        <p><em>Ocimum basilicum</em></p>
+        <p><strong>Catégorie :</strong> Aromatique</p>
+        <p><strong>Exposition :</strong> Plein soleil</p>
+        <p><strong>Besoins en eau :</strong> Moyen</p>
+        <p><strong>Culture :</strong> les deux</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=2" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Tomate cerise</h3>
+        <p><em>Solanum lycopersicum var. cerasiforme</em></p>
+        <p><strong>Catégorie :</strong> Fruits</p>
+        <p><strong>Exposition :</strong> Plein soleil, minimum 6h/jour</p>
+        <p><strong>Besoins en eau :</strong> Moyen</p>
+        <p><strong>Culture :</strong> les deux</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=3" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Menthe</h3>
+        <p><em>Mentha spp.</em></p>
+        <p><strong>Catégorie :</strong> Aromatique</p>
+        <p><strong>Exposition :</strong> Mi-ombre à plein soleil</p>
+        <p><strong>Besoins en eau :</strong> Moyen</p>
+        <p><strong>Culture :</strong> les deux</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=4" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Laitue</h3>
+        <p><em>Lactuca sativa</em></p>
+        <p><strong>Catégorie :</strong> Feuilles comestibles</p>
+        <p><strong>Exposition :</strong> Mi-ombre à soleil partiel</p>
+        <p><strong>Besoins en eau :</strong> Moyen</p>
+        <p><strong>Culture :</strong> les deux</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=5" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Fraisier</h3>
+        <p><em>Fragaria × ananassa</em></p>
+        <p><strong>Catégorie :</strong> Fruits</p>
+        <p><strong>Exposition :</strong> Plein soleil</p>
+        <p><strong>Besoins en eau :</strong> Moyen</p>
+        <p><strong>Culture :</strong> les deux</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=6" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Persil</h3>
+        <p><em>Petroselinum crispum</em></p>
+        <p><strong>Catégorie :</strong> Aromatique</p>
+        <p><strong>Exposition :</strong> Mi-ombre à plein soleil</p>
+        <p><strong>Besoins en eau :</strong> Moyen</p>
+        <p><strong>Culture :</strong> les deux</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=7" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Radis</h3>
+        <p><em>Raphanus sativus</em></p>
+        <p><strong>Catégorie :</strong> Légumes</p>
+        <p><strong>Exposition :</strong> Soleil à mi-ombre</p>
+        <p><strong>Besoins en eau :</strong> Moyen</p>
+        <p><strong>Culture :</strong> balcon</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=8" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Lavande</h3>
+        <p><em>Lavandula angustifolia</em></p>
+        <p><strong>Catégorie :</strong> Ornementale</p>
+        <p><strong>Exposition :</strong> Plein soleil</p>
+        <p><strong>Besoins en eau :</strong> Faible</p>
+        <p><strong>Culture :</strong> jardin</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=9" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Ciboulette</h3>
+        <p><em>Allium schoenoprasum</em></p>
+        <p><strong>Catégorie :</strong> Aromatique</p>
+        <p><strong>Exposition :</strong> Soleil ou mi-ombre</p>
+        <p><strong>Besoins en eau :</strong> Moyen</p>
+        <p><strong>Culture :</strong> les deux</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=10" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Romarin</h3>
+        <p><em>Rosmarinus officinalis</em></p>
+        <p><strong>Catégorie :</strong> Aromatique</p>
+        <p><strong>Exposition :</strong> Plein soleil</p>
+        <p><strong>Besoins en eau :</strong> Faible</p>
+        <p><strong>Culture :</strong> les deux</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=11" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Citronnelle</h3>
+        <p><em>Cymbopogon citratus</em></p>
+        <p><strong>Catégorie :</strong> Aromatique</p>
+        <p><strong>Exposition :</strong> Plein soleil</p>
+        <p><strong>Besoins en eau :</strong> Moyen</p>
+        <p><strong>Culture :</strong> Balcon</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=12" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Aloe Vera</h3>
+        <p><em>Aloe barbadensis miller</em></p>
+        <p><strong>Catégorie :</strong> Ornementale</p>
+        <p><strong>Exposition :</strong> Mi-ombre</p>
+        <p><strong>Besoins en eau :</strong> Faible</p>
+        <p><strong>Culture :</strong> Intérieur</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=13" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Courgette</h3>
+        <p><em>Cucurbita pepo</em></p>
+        <p><strong>Catégorie :</strong> Légumes</p>
+        <p><strong>Exposition :</strong> Plein soleil</p>
+        <p><strong>Besoins en eau :</strong> Élevé</p>
+        <p><strong>Culture :</strong> Jardin</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=14" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Betterave</h3>
+        <p><em>Beta vulgaris</em></p>
+        <p><strong>Catégorie :</strong> Légumes</p>
+        <p><strong>Exposition :</strong> Mi-ombre</p>
+        <p><strong>Besoins en eau :</strong> Moyen</p>
+        <p><strong>Culture :</strong> Jardin</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=15" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Poivron</h3>
+        <p><em>Capsicum annuum</em></p>
+        <p><strong>Catégorie :</strong> Fruits</p>
+        <p><strong>Exposition :</strong> Plein soleil</p>
+        <p><strong>Besoins en eau :</strong> Élevé</p>
+        <p><strong>Culture :</strong> Les deux</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=16" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Ficus</h3>
+        <p><em>Ficus elastica</em></p>
+        <p><strong>Catégorie :</strong> Ornementale</p>
+        <p><strong>Exposition :</strong> Mi-ombre</p>
+        <p><strong>Besoins en eau :</strong> Moyen</p>
+        <p><strong>Culture :</strong> Intérieur</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=17" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Camomille</h3>
+        <p><em>Matricaria chamomilla</em></p>
+        <p><strong>Catégorie :</strong> Médicinale</p>
+        <p><strong>Exposition :</strong> Plein soleil</p>
+        <p><strong>Besoins en eau :</strong> Moyen</p>
+        <p><strong>Culture :</strong> Balcon</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=18" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Capucine</h3>
+        <p><em>Tropaeolum majus</em></p>
+        <p><strong>Catégorie :</strong> Ornementale</p>
+        <p><strong>Exposition :</strong> Plein soleil</p>
+        <p><strong>Besoins en eau :</strong> Moyen</p>
+        <p><strong>Culture :</strong> Les deux</p>
+      </a>
+    </p>
+  </div>
+  <div class="plant-item">
+    <p>
+      <a href="details.html?id=19" style="text-decoration: none; color: inherit;">
+        <h3 style="margin-bottom: 0.25rem;">Piment d'Espelette</h3>
+        <p><em>Capsicum annuum var. Gorria</em></p>
+        <p><strong>Catégorie :</strong> Fruits</p>
+        <p><strong>Exposition :</strong> Plein soleil</p>
+        <p><strong>Besoins en eau :</strong> Moyen</p>
+        <p><strong>Culture :</strong> Jardin</p>
+      </a>
+    </p>
+  </div>
+</section>
+    
+    </main>
+<footer role="contentinfo">
+  <p>&copy; 2025 UrbanGrow — Cultivons la ville ensemble.</p>
 
-  <main>
-    <h1 style="text-align: center;">Nos Plantes</h1>
-    <ul class="plant-grid">
-      <li class="plant-card">
-        <a href="details.html?id=1">
-          <h3>Basilic</h3>
-          <p><em>Ocimum basilicum</em></p>
-          <p><strong>Catégorie :</strong> Aromatique</p>
-          <p><strong>Exposition :</strong> Plein soleil</p>
-          <p><strong>Besoins en eau :</strong> Moyen</p>
-          <p><strong>Culture :</strong> balcon</p>
-        </a>
-      </li>
-      <li class="plant-card">
-        <a href="details.html?id=2">
-          <h3>Tomate cerise</h3>
-          <p><em>Solanum lycopersicum var. cerasiforme</em></p>
-          <p><strong>Catégorie :</strong> Fruits</p>
-          <p><strong>Exposition :</strong> Plein soleil</p>
-          <p><strong>Besoins en eau :</strong> Élevé</p>
-          <p><strong>Culture :</strong> jardin</p>
-        </a>
-      </li>
-      <li class="plant-card">
-        <a href="details.html?id=3">
-          <h3>Menthe</h3>
-          <p><em>Mentha spicata</em></p>
-          <p><strong>Catégorie :</strong> Aromatique</p>
-          <p><strong>Exposition :</strong> Mi-ombre</p>
-          <p><strong>Besoins en eau :</strong> Élevé</p>
-          <p><strong>Culture :</strong> les deux</p>
-        </a>
-      </li>
-      <li class="plant-card">
-        <a href="details.html?id=4">
-          <h3>Fraisier</h3>
-          <p><em>Fragaria × ananassa</em></p>
-          <p><strong>Catégorie :</strong> Fruits</p>
-          <p><strong>Exposition :</strong> Plein soleil</p>
-          <p><strong>Besoins en eau :</strong> Moyen</p>
-          <p><strong>Culture :</strong> les deux</p>
-        </a>
-      </li>
-      <li class="plant-card">
-        <a href="details.html?id=5">
-          <h3>Persil</h3>
-          <p><em>Petroselinum crispum</em></p>
-          <p><strong>Catégorie :</strong> Aromatique</p>
-          <p><strong>Exposition :</strong> Mi-ombre à plein soleil</p>
-          <p><strong>Besoins en eau :</strong> Moyen</p>
-          <p><strong>Culture :</strong> les deux</p>
-        </a>
-      </li>
-      <li class="plant-card">
-        <a href="details.html?id=6">
-          <h3>Radis</h3>
-          <p><em>Raphanus sativus</em></p>
-          <p><strong>Catégorie :</strong> Légumes</p>
-          <p><strong>Exposition :</strong> Soleil à mi-ombre</p>
-          <p><strong>Besoins en eau :</strong> Moyen</p>
-          <p><strong>Culture :</strong> balcon</p>
-        </a>
-      </li>
-      <li class="plant-card">
-        <a href="details.html?id=7">
-          <h3>Lavande</h3>
-          <p><em>Lavandula angustifolia</em></p>
-          <p><strong>Catégorie :</strong> Ornementale</p>
-          <p><strong>Exposition :</strong> Plein soleil</p>
-          <p><strong>Besoins en eau :</strong> Faible</p>
-          <p><strong>Culture :</strong> jardin</p>
-        </a>
-      </li>
-      <li class="plant-card">
-        <a href="details.html?id=8">
-          <h3>Ciboulette</h3>
-          <p><em>Allium schoenoprasum</em></p>
-          <p><strong>Catégorie :</strong> Aromatique</p>
-          <p><strong>Exposition :</strong> Soleil ou mi-ombre</p>
-          <p><strong>Besoins en eau :</strong> Moyen</p>
-          <p><strong>Culture :</strong> les deux</p>
-        </a>
-      </li>
-      <li class="plant-card">
-        <a href="details.html?id=9">
-          <h3>Romarin</h3>
-          <p><em>Rosmarinus officinalis</em></p>
-          <p><strong>Catégorie :</strong> Aromatique</p>
-          <p><strong>Exposition :</strong> Plein soleil</p>
-          <p><strong>Besoins en eau :</strong> Faible</p>
-          <p><strong>Culture :</strong> les deux</p>
-        </a>
-      </li>
-      <li class="plant-card">
-        <a href="details.html?id=10">
-          <h3>Citronnelle</h3>
-          <p><em>Cymbopogon citratus</em></p>
-          <p><strong>Catégorie :</strong> Aromatique</p>
-          <p><strong>Exposition :</strong> Plein soleil</p>
-          <p><strong>Besoins en eau :</strong> Moyen</p>
-          <p><strong>Culture :</strong> balcon</p>
-        </a>
-      </li>
-      <li class="plant-card">
-        <a href="details.html?id=11">
-          <h3>Aloe Vera</h3>
-          <p><em>Aloe barbadensis miller</em></p>
-          <p><strong>Catégorie :</strong> Ornementale</p>
-          <p><strong>Exposition :</strong> Mi-ombre</p>
-          <p><strong>Besoins en eau :</strong> Faible</p>
-          <p><strong>Culture :</strong> intérieur</p>
-        </a>
-      </li>
-      <li class="plant-card">
-        <a href="details.html?id=12">
-          <h3>Courgette</h3>
-          <p><em>Cucurbita pepo</em></p>
-          <p><strong>Catégorie :</strong> Légumes</p>
-          <p><strong>Exposition :</strong> Plein soleil</p>
-          <p><strong>Besoins en eau :</strong> Élevé</p>
-          <p><strong>Culture :</strong> jardin</p>
-        </a>
-      </li>
-      <li class="plant-card">
-        <a href="details.html?id=13">
-          <h3>Betterave</h3>
-          <p><em>Beta vulgaris</em></p>
-          <p><strong>Catégorie :</strong> Légumes</p>
-          <p><strong>Exposition :</strong> Mi-ombre</p>
-          <p><strong>Besoins en eau :</strong> Moyen</p>
-          <p><strong>Culture :</strong> jardin</p>
-        </a>
-      </li>
-      <li class="plant-card">
-        <a href="details.html?id=14">
-          <h3>Poivron</h3>
-          <p><em>Capsicum annuum</em></p>
-          <p><strong>Catégorie :</strong> Fruits</p>
-          <p><strong>Exposition :</strong> Plein soleil</p>
-          <p><strong>Besoins en eau :</strong> Élevé</p>
-          <p><strong>Culture :</strong> les deux</p>
-        </a>
-      </li>
-      <li class="plant-card">
-        <a href="details.html?id=15">
-          <h3>Ficus</h3>
-          <p><em>Ficus elastica</em></p>
-          <p><strong>Catégorie :</strong> Ornementale</p>
-          <p><strong>Exposition :</strong> Mi-ombre</p>
-          <p><strong>Besoins en eau :</strong> Moyen</p>
-          <p><strong>Culture :</strong> intérieur</p>
-        </a>
-      </li>
-      <li class="plant-card">
-        <a href="details.html?id=16">
-          <h3>Camomille</h3>
-          <p><em>Matricaria chamomilla</em></p>
-          <p><strong>Catégorie :</strong> Médicinale</p>
-          <p><strong>Exposition :</strong> Plein soleil</p>
-          <p><strong>Besoins en eau :</strong> Moyen</p>
-          <p><strong>Culture :</strong> balcon</p>
-        </a>
-      </li>
-      <li class="plant-card">
-        <a href="details.html?id=17">
-          <h3>Capucine</h3>
-          <p><em>Tropaeolum majus</em></p>
-          <p><strong>Catégorie :</strong> Ornementale</p>
-          <p><strong>Exposition :</strong> Plein soleil</p>
-          <p><strong>Besoins en eau :</strong> Moyen</p>
-          <p><strong>Culture :</strong> les deux</p>
-        </a>
-      </li>
-      <li class="plant-card">
-        <a href="details.html?id=18">
-          <h3>Piment d'Espelette</h3>
-          <p><em>Capsicum annuum var. Gorria</em></p>
-          <p><strong>Catégorie :</strong> Fruits</p>
-          <p><strong>Exposition :</strong> Plein soleil</p>
-          <p><strong>Besoins en eau :</strong> Moyen</p>
-          <p><strong>Culture :</strong> jardin</p>
-        </a>
-      </li>
+  <nav aria-label="Réseaux sociaux">
+    <ul>
+      <li><a href="#" aria-label="Page Facebook UrbanGrow">Facebook</a></li>
+      <li><a href="#" aria-label="Profil Instagram UrbanGrow">Instagram</a></li>
+      <li><a href="#" aria-label="Chaîne YouTube UrbanGrow">YouTube</a></li>
+      <li><a href="#" aria-label="Profil Twitter UrbanGrow">Twitter</a></li>
     </ul>
   </main>
 
-  <footer>
-    <p>&copy; 2025 UrbanGrow</p>
-    <a href="../accessibility.html">Accessibilité</a>
-  </footer>
+  <nav aria-label="Informations légales">
+    <ul>
+      <li><a href="#">Mentions légales</a></li>
+      <li><a href="#">Accessibilité</a></li>
+      <li><a href="#">Données personnelles</a></li>
+    </ul>
+  </nav>
+</footer>
+
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('search-input');
+        const filterSelect = document.getElementById('filter-select');
+        const plantsList = document.getElementById('plants-list');
+
+        let allPlants = [];
+
+        async function fetchPlants() {
+            const response = await fetch('../data/plants.json');
+            allPlants = await response.json();
+            displayPlants(allPlants);
+        }
+
+        function displayPlants(plants) {
+            plantsList.innerHTML = '';
+            plants.forEach(plant => {
+                const li = document.createElement('li');
+                li.className = 'plant-card';
+                li.style.padding = "1rem";
+                li.style.border = "1px solid var(--color-primary)";
+                li.style.borderRadius = "8px";
+                li.style.boxShadow = "0 2px 4px rgba(0,0,0,0.05)";
+                li.style.listStyle = "none";
+
+                li.innerHTML = `
+                    <a href="details.html?id=${plant.id}" style="text-decoration: none; color: inherit;">
+                        <h3 style="margin-bottom: 0.25rem;">${plant.name}</h3>
+                        <p><em>${plant.scientificName}</em></p>
+                        <p><strong>Catégorie :</strong> ${plant.category}</p>
+                        <p><strong>Exposition :</strong> ${plant.sunlight}</p>
+                        <p><strong>Besoins en eau :</strong> ${plant.waterNeeds || plant.water}</p>
+                        <p><strong>Culture :</strong> ${plant.growPlace || "N/A"}</p>
+                    </a>
+                `;
+                plantsList.appendChild(li);
+            });
+        }
+
+        function filterPlants() {
+            const query = searchInput.value.toLowerCase();
+            const type = filterSelect.value;
+            const filtered = allPlants.filter(plant => {
+                const matchesSearch = plant.name.toLowerCase().includes(query);
+                const matchesFilter = type === '' || plant.category === type;
+                return matchesSearch && matchesFilter;
+            });
+            displayPlants(filtered);
+        }
+
+        searchInput.addEventListener('input', filterPlants);
+        filterSelect.addEventListener('change', filterPlants);
+
+        fetchPlants();
+    });
+    </script>
 </body>
 </html>

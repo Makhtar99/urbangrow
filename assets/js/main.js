@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
         li.style.padding = "1rem";
         li.style.border = "1px solid var(--color-primary)";
         li.style.borderRadius = "8px";
-        li.style.backgroundColor = "var(--color-accent)";
         li.style.boxShadow = "0 2px 4px rgba(0,0,0,0.05)";
         li.style.listStyle = "none";
 

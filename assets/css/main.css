@@ -1,10 +1,8 @@
 
 :root {
-    --color-primary: #2c6e49;
+    --color-primary: #276341;
     --color-secondary: #4c956c;
-    --color-accent: #fefee3;
     --color-dark: #183a37;
-    --color-light: #fefefe;
     --color-background: #FFF;
     --font-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
@@ -12,7 +10,7 @@
 body {
     font-family: var(--font-main);
     color: var(--color-dark);
-    background-color: var(--color-light);
+    background-color: var(--color-background);
     display: block;
     display: flex;
     flex-direction: column;
@@ -196,8 +194,8 @@ footer {
     max-width: 800px;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: #fefee3;
-    border: 2px solid var(--color-primary);
+    background-color: var(--var-ba);
+    box-shadow: 2px 5px 25px #0b104f14 !important;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
@@ -262,25 +260,3 @@ footer nav ul {
   gap: 1.5rem;
   flex-wrap: wrap;
 }
-
-#plant-details {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background-color: #fefee3;
-      border: 2px solid var(--color-primary);
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    #plant-details h2 {
-      font-size: 2rem;
-      margin-bottom: 0.25rem;
-    }
-    #plant-details em {
-      display: block;
-      color: #555;
-      margin-bottom: 1rem;
-    }
-    #plant-details p {
-      margin-bottom: 0.5rem;
-    }
