@@ -10,7 +10,9 @@
 </head>
 <body>
   <header style="display: flex; justify-content: space-between; align-items: center;">
-    <img src="/assets/img/logo.webp" alt="Logo UrbanGrow" style="width: 100px; height: 100px;" loading="lazy">
+    <a href="../index.html" aria-label="Page d'accueil UrbanGrow" style="cursor: pointer;">
+        <img src="/assets/img/logo.webp" alt="Logo UrbanGrow" style="width: 100px; height: auto;" loading="lazy">
+    </a>
     <nav>
       <ul>
         <li><a href="/index.html">Accueil</a></li>
@@ -25,8 +27,8 @@
     <article id="plant-details">
       <div style="display: flex;">
         <div style="display: flex; flex-direction: column; text-align: left;">
-          <h2>Persil</h2>
-          <p><em>Petroselinum crispum</em></p>
+          <h2>Menthe</h2>
+          <p><em>Mentha spp.</em></p>
           <p><strong>Catégorie :</strong> Aromatique</p>
           <p><strong>Exposition :</strong> Mi-ombre à plein soleil</p>
           <p><strong>Origine :</strong> Europe</p>
@@ -38,18 +40,34 @@
           <p><strong>Culture :</strong> les deux</p>
           <p><strong>Comestible :</strong> Oui</p>
           <h3>Conseils</h3>
-          <p>Récoltez les tiges extérieures à la base pour stimuler la croissance.</p>
+          <p>Cultivez en pot pour contrôler sa croissance.</p>
         </div>
         <div style="display: flex; justify-content: center; align-items: center;">
-          <img src="/assets/img/plants/persil.webp" alt="Persil" style="width: 300px; height: auto; border-radius: 10px;">
+          <img src="/assets/img/plants/menthe.webp" alt="Menthe" style="width: 300px; height: auto; border-radius: 10px;">
         </div>
       </div>
     </article>
   </main>
 
-  <footer>
-    <p>&copy; 2025 UrbanGrow</p>
-    <a href="/accessibility.html">Accessibilité</a>
-  </footer>
+<footer role="contentinfo">
+  <p>&copy; 2025 UrbanGrow — Cultivons la ville ensemble.</p>
+
+  <nav aria-label="Réseaux sociaux">
+    <ul>
+      <li><a href="#" aria-label="Page Facebook UrbanGrow">Facebook</a></li>
+      <li><a href="#" aria-label="Profil Instagram UrbanGrow">Instagram</a></li>
+      <li><a href="#" aria-label="Chaîne YouTube UrbanGrow">YouTube</a></li>
+      <li><a href="#" aria-label="Profil Twitter UrbanGrow">Twitter</a></li>
+    </ul>
+  </nav>
+
+  <nav aria-label="Informations légales">
+    <ul>
+      <li><a href="#">Mentions légales</a></li>
+      <li><a href="#">Accessibilité</a></li>
+      <li><a href="#">Données personnelles</a></li>
+    </ul>
+  </nav>
+</footer>
 </body>
 </html>

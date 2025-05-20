@@ -367,5 +367,23 @@
     "growTime": "10 semaines",
     "wateringFrequency": 2,
     "edible": true
-  }
+  },
+  {
+  "id": "20",
+  "name": "Patate",
+  "scientificName": "Solanum tuberosum",
+  "category": "Légumes",
+  "image": "patate.webp",
+  "description": "La pomme de terre est un légume-racine très cultivé, facile à planter et riche en glucides.",
+  "season": "Printemps",
+  "origin": "Amérique du Sud",
+  "waterNeeds": "Élevé",
+  "difficulty": "Facile",
+  "growPlace": "jardin",
+  "temperature": "12-22°C",
+  "sunlight": "Plein soleil",
+  "growTime": "10-12 semaines",
+  "wateringFrequency": 3,
+  "edible": true
+}
 ]
