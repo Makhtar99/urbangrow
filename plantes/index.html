@@ -9,8 +9,8 @@
 </head>
 <body>
   <header>
-    <a href="../index.html" aria-label="Page d'accueil UrbanGrow" style="cursor: pointer;">
-        <img src="../assets/img/logo.webp" alt="Logo UrbanGrow" style="width: 100px; height: auto;" loading="lazy">
+    <a href="../index.html" aria-label="Page d'accueil UrbanGrow">
+        <img src="../assets/img/logo.webp" alt="Logo UrbanGrow" loading="lazy" />
     </a>
     <nav>
       <ul>
@@ -226,66 +226,6 @@
     </ul>
   </nav>
 </footer>
-
-
-    <script src="../assets/js/main.js"></script>
-    <script>
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const searchInput = document.getElementById('search-input');
-        const filterSelect = document.getElementById('filter-select');
-        const plantsList = document.getElementById('plants-list');
-
-        let allPlants = [];
-
-        async function fetchPlants() {
-            const response = await fetch('../data/plants.json');
-            allPlants = await response.json();
-            displayPlants(allPlants);
-        }
-
-        function displayPlants(plants) {
-            plantsList.innerHTML = '';
-            plants.forEach(plant => {
-                const li = document.createElement('li');
-                li.className = 'plant-card';
-                li.style.padding = "1rem";
-                li.style.border = "1px solid var(--color-primary)";
-                li.style.borderRadius = "8px";
-                li.style.boxShadow = "0 2px 4px rgba(0,0,0,0.05)";
-                li.style.listStyle = "none";
-
-                li.innerHTML = `
-                    <a href="details.html?id=${plant.id}" style="text-decoration: none; color: inherit;">
-                        <h3 style="margin-bottom: 0.25rem;">${plant.name}</h3>
-                        <p><em>${plant.scientificName}</em></p>
-                        <p><strong>Catégorie :</strong> ${plant.category}</p>
-                        <p><strong>Exposition :</strong> ${plant.sunlight}</p>
-                        <p><strong>Besoins en eau :</strong> ${plant.waterNeeds || plant.water}</p>
-                        <p><strong>Culture :</strong> ${plant.growPlace || "N/A"}</p>
-                    </a>
-                `;
-                plantsList.appendChild(li);
-            });
-        }
-
-        function filterPlants() {
-            const query = searchInput.value.toLowerCase();
-            const type = filterSelect.value;
-            const filtered = allPlants.filter(plant => {
-                const matchesSearch = plant.name.toLowerCase().includes(query);
-                const matchesFilter = type === '' || plant.category === type;
-                return matchesSearch && matchesFilter;
-            });
-            displayPlants(filtered);
-        }
-
-        searchInput.addEventListener('input', filterPlants);
-        filterSelect.addEventListener('change', filterPlants);
-
-        fetchPlants();
-    });
-    </script>
->>>>>>> Stashed changes
+<script src="../assets/js/main.js"></script>
 </body>
 </html>

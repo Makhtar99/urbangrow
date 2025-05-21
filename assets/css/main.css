@@ -31,7 +31,7 @@ main {
     border-bottom: 1px var(--color-secondary) solid;
 }
 
-main h1 {
+main h1, .main-text {
     text-align: center;
 }
 
@@ -44,6 +44,8 @@ header {
 
 header img {
     cursor: pointer;
+    width: 100px;
+    height: 100px;
 }
 
 nav ul {
@@ -147,15 +149,23 @@ section {
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
+section a {
+  text-decoration: underline;
+  color: var(--color-secondary);
+}
+
 blockquote {
+  font-size: 18px;
   font-style: italic;
   margin: 1rem 0;
   padding-left: 1rem;
   border-left: 4px solid var(--color-primary);
+  border-right: 4px solid var(--color-primary);
 }
 
 blockquote footer {
-    padding: 0;
+    padding: 0 2rem;
+    text-align: right;
 }
 
 /* Plant / Jardin */
@@ -241,6 +251,15 @@ blockquote footer {
     display: flex;
     justify-content: space-between;
 }
+#plant-img-details {
+    display: flex;
+    align-items: center;
+}
+#plant-img-details img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
 
 
 /* FOOTER */
@@ -282,8 +301,7 @@ footer nav ul {
 #contact-form button {
     max-width: 100px;
     margin: auto;
-}
-.form-group {
+}#form-group {
     margin-bottom: 1rem;
     text-align: left;
 }
