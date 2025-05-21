@@ -9,8 +9,10 @@
   <link rel="stylesheet" href="/assets/css/print.css" media="print" />
 </head>
 <body>
-  <header style="display: flex; justify-content: space-between; align-items: center;">
-    <img src="/assets/img/logo.webp" alt="Logo UrbanGrow" style="width: 100px; height: 100px;" loading="lazy" />
+  <header>
+    <a href="/index.html" aria-label="Page d'accueil UrbanGrow">
+        <img src="/assets/img/logo.webp" alt="Logo UrbanGrow" style="width: 100px; height: auto;" loading="lazy">
+    </a>
     <nav>
       <ul>
         <li><a href="/index.html">Accueil</a></li>
@@ -47,9 +49,25 @@
     </article>
   </main>
 
-  <footer>
-    <p>&copy; 2025 UrbanGrow</p>
-    <a href="/accessibility.html">Accessibilité</a>
-  </footer>
+<footer role="contentinfo">
+  <p>&copy; 2025 UrbanGrow — Cultivons la ville ensemble.</p>
+
+  <nav aria-label="Réseaux sociaux">
+    <ul>
+      <li><a href="#" aria-label="Page Facebook UrbanGrow">Facebook</a></li>
+      <li><a href="#" aria-label="Profil Instagram UrbanGrow">Instagram</a></li>
+      <li><a href="#" aria-label="Chaîne YouTube UrbanGrow">YouTube</a></li>
+      <li><a href="#" aria-label="Profil Twitter UrbanGrow">Twitter</a></li>
+    </ul>
+  </nav>
+
+  <nav aria-label="Informations légales">
+    <ul>
+      <li><a href="#">Mentions légales</a></li>
+      <li><a href="#">Accessibilité</a></li>
+      <li><a href="#">Données personnelles</a></li>
+    </ul>
+  </nav>
+</footer>
 </body>
 </html>

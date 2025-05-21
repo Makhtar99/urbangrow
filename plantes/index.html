@@ -6,37 +6,12 @@
   <title>Plantes - UrbanGrow</title>
   <link rel="stylesheet" href="../assets/css/reset.css" />
   <link rel="stylesheet" href="../assets/css/main.css" />
-  <style>
-    .plant-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-    }
-
-    .plant-card {
-      padding: 1rem;
-      border: 1px solid var(--color-primary);
-      border-radius: 8px;
-      background-color: var(--color-accent);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-      list-style: none;
-    }
-
-    .plant-card a {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-
-    .plant-card h3 {
-      margin-bottom: 0.25rem;
-    }
-  </style>
 </head>
 <body>
-  <header style="display: flex; justify-content: space-between; align-items: center;">
-    <img src="../assets/img/logo.webp" alt="Logo UrbanGrow" style="width: 100px; height: 100px;" loading="lazy" />
+  <header>
+    <a href="../index.html" aria-label="Page d'accueil UrbanGrow" style="cursor: pointer;">
+        <img src="../assets/img/logo.webp" alt="Logo UrbanGrow" style="width: 100px; height: auto;" loading="lazy">
+    </a>
     <nav>
       <ul>
         <li><a href="../index.html">Accueil</a></li>
@@ -51,7 +26,7 @@
     <h1 style="text-align: center;">Nos Plantes</h1>
     <ul class="plant-grid">
       <li class="plant-card">
-        <a href="details.html?id=1">
+        <a href="details/basilic.html">
           <h3>Basilic</h3>
           <p><em>Ocimum basilicum</em></p>
           <p><strong>Catégorie :</strong> Aromatique</p>
@@ -61,7 +36,7 @@
         </a>
       </li>
       <li class="plant-card">
-        <a href="details.html?id=2">
+        <a href="details/tomate_cerise.html">
           <h3>Tomate cerise</h3>
           <p><em>Solanum lycopersicum var. cerasiforme</em></p>
           <p><strong>Catégorie :</strong> Fruits</p>
@@ -71,7 +46,7 @@
         </a>
       </li>
       <li class="plant-card">
-        <a href="details.html?id=3">
+        <a href="details/menthe.html">
           <h3>Menthe</h3>
           <p><em>Mentha spicata</em></p>
           <p><strong>Catégorie :</strong> Aromatique</p>
@@ -81,7 +56,7 @@
         </a>
       </li>
       <li class="plant-card">
-        <a href="details.html?id=4">
+        <a href="details/fraisier.html">
           <h3>Fraisier</h3>
           <p><em>Fragaria × ananassa</em></p>
           <p><strong>Catégorie :</strong> Fruits</p>
@@ -91,7 +66,7 @@
         </a>
       </li>
       <li class="plant-card">
-        <a href="details.html?id=5">
+        <a href="details/persil.html">
           <h3>Persil</h3>
           <p><em>Petroselinum crispum</em></p>
           <p><strong>Catégorie :</strong> Aromatique</p>
@@ -101,7 +76,7 @@
         </a>
       </li>
       <li class="plant-card">
-        <a href="details.html?id=6">
+        <a href="details/radis.html">
           <h3>Radis</h3>
           <p><em>Raphanus sativus</em></p>
           <p><strong>Catégorie :</strong> Légumes</p>
@@ -111,7 +86,7 @@
         </a>
       </li>
       <li class="plant-card">
-        <a href="details.html?id=7">
+        <a href="details/lavande.html">
           <h3>Lavande</h3>
           <p><em>Lavandula angustifolia</em></p>
           <p><strong>Catégorie :</strong> Ornementale</p>
@@ -121,7 +96,7 @@
         </a>
       </li>
       <li class="plant-card">
-        <a href="details.html?id=8">
+        <a href="details/ciboulette.html">
           <h3>Ciboulette</h3>
           <p><em>Allium schoenoprasum</em></p>
           <p><strong>Catégorie :</strong> Aromatique</p>
@@ -131,7 +106,7 @@
         </a>
       </li>
       <li class="plant-card">
-        <a href="details.html?id=9">
+        <a href="details/romarin.html">
           <h3>Romarin</h3>
           <p><em>Rosmarinus officinalis</em></p>
           <p><strong>Catégorie :</strong> Aromatique</p>
@@ -141,7 +116,7 @@
         </a>
       </li>
       <li class="plant-card">
-        <a href="details.html?id=10">
+        <a href="details/citronelle.html">
           <h3>Citronnelle</h3>
           <p><em>Cymbopogon citratus</em></p>
           <p><strong>Catégorie :</strong> Aromatique</p>
@@ -151,7 +126,7 @@
         </a>
       </li>
       <li class="plant-card">
-        <a href="details.html?id=11">
+        <a href="details/aloe_vera.html">
           <h3>Aloe Vera</h3>
           <p><em>Aloe barbadensis miller</em></p>
           <p><strong>Catégorie :</strong> Ornementale</p>
@@ -161,7 +136,7 @@
         </a>
       </li>
       <li class="plant-card">
-        <a href="details.html?id=12">
+        <a href="details/courgette.html">
           <h3>Courgette</h3>
           <p><em>Cucurbita pepo</em></p>
           <p><strong>Catégorie :</strong> Légumes</p>
@@ -171,7 +146,7 @@
         </a>
       </li>
       <li class="plant-card">
-        <a href="details.html?id=13">
+        <a href="details/betterave.html">
           <h3>Betterave</h3>
           <p><em>Beta vulgaris</em></p>
           <p><strong>Catégorie :</strong> Légumes</p>
@@ -181,7 +156,7 @@
         </a>
       </li>
       <li class="plant-card">
-        <a href="details.html?id=14">
+        <a href="details/poivron.html">
           <h3>Poivron</h3>
           <p><em>Capsicum annuum</em></p>
           <p><strong>Catégorie :</strong> Fruits</p>
@@ -191,7 +166,7 @@
         </a>
       </li>
       <li class="plant-card">
-        <a href="details.html?id=15">
+        <a href="details/ficus.html">
           <h3>Ficus</h3>
           <p><em>Ficus elastica</em></p>
           <p><strong>Catégorie :</strong> Ornementale</p>
@@ -201,7 +176,7 @@
         </a>
       </li>
       <li class="plant-card">
-        <a href="details.html?id=16">
+        <a href="details/camomille.html">
           <h3>Camomille</h3>
           <p><em>Matricaria chamomilla</em></p>
           <p><strong>Catégorie :</strong> Médicinale</p>
@@ -211,7 +186,7 @@
         </a>
       </li>
       <li class="plant-card">
-        <a href="details.html?id=17">
+        <a href="details/capucine.html">
           <h3>Capucine</h3>
           <p><em>Tropaeolum majus</em></p>
           <p><strong>Catégorie :</strong> Ornementale</p>
@@ -221,7 +196,7 @@
         </a>
       </li>
       <li class="plant-card">
-        <a href="details.html?id=18">
+        <a href="details/piment_espelette.html">
           <h3>Piment d'Espelette</h3>
           <p><em>Capsicum annuum var. Gorria</em></p>
           <p><strong>Catégorie :</strong> Fruits</p>
@@ -230,12 +205,87 @@
           <p><strong>Culture :</strong> jardin</p>
         </a>
       </li>
+      <li class="plant-card">
+        <a href="details/patate.html">
+          <h3>Patate</h3>
+          <p><em>Solanum tuberosum</em></p>
+          <p><strong>Catégorie :</strong> Légumes</p>
+          <p><strong>Exposition :</strong> Plein soleil</p>
+          <p><strong>Besoins en eau :</strong> Élevé</p>
+          <p><strong>Culture :</strong> jardin</p>
+        </a>
+      </li>
     </ul>
   </main>
 
-  <footer>
-    <p>&copy; 2025 UrbanGrow</p>
-    <a href="../accessibility.html">Accessibilité</a>
-  </footer>
+  <nav aria-label="Informations légales">
+    <ul>
+      <li><a href="#">Mentions légales</a></li>
+      <li><a href="#">Accessibilité</a></li>
+      <li><a href="#">Données personnelles</a></li>
+    </ul>
+  </nav>
+</footer>
+
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchInput = document.getElementById('search-input');
+        const filterSelect = document.getElementById('filter-select');
+        const plantsList = document.getElementById('plants-list');
+
+        let allPlants = [];
+
+        async function fetchPlants() {
+            const response = await fetch('../data/plants.json');
+            allPlants = await response.json();
+            displayPlants(allPlants);
+        }
+
+        function displayPlants(plants) {
+            plantsList.innerHTML = '';
+            plants.forEach(plant => {
+                const li = document.createElement('li');
+                li.className = 'plant-card';
+                li.style.padding = "1rem";
+                li.style.border = "1px solid var(--color-primary)";
+                li.style.borderRadius = "8px";
+                li.style.boxShadow = "0 2px 4px rgba(0,0,0,0.05)";
+                li.style.listStyle = "none";
+
+                li.innerHTML = `
+                    <a href="details.html?id=${plant.id}" style="text-decoration: none; color: inherit;">
+                        <h3 style="margin-bottom: 0.25rem;">${plant.name}</h3>
+                        <p><em>${plant.scientificName}</em></p>
+                        <p><strong>Catégorie :</strong> ${plant.category}</p>
+                        <p><strong>Exposition :</strong> ${plant.sunlight}</p>
+                        <p><strong>Besoins en eau :</strong> ${plant.waterNeeds || plant.water}</p>
+                        <p><strong>Culture :</strong> ${plant.growPlace || "N/A"}</p>
+                    </a>
+                `;
+                plantsList.appendChild(li);
+            });
+        }
+
+        function filterPlants() {
+            const query = searchInput.value.toLowerCase();
+            const type = filterSelect.value;
+            const filtered = allPlants.filter(plant => {
+                const matchesSearch = plant.name.toLowerCase().includes(query);
+                const matchesFilter = type === '' || plant.category === type;
+                return matchesSearch && matchesFilter;
+            });
+            displayPlants(filtered);
+        }
+
+        searchInput.addEventListener('input', filterPlants);
+        filterSelect.addEventListener('change', filterPlants);
+
+        fetchPlants();
+    });
+    </script>
+>>>>>>> Stashed changes
 </body>
 </html>
