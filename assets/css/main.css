@@ -31,7 +31,7 @@ main {
     border-bottom: 1px var(--color-secondary) solid;
 }
 
-main h1, .main-text {
+main h1, #main-text {
     text-align: center;
 }
 
@@ -170,14 +170,14 @@ blockquote footer {
 
 /* Plant / Jardin */
 
-.plant-grid, .garden-grid {
+#plant-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
     padding: 2rem;
 }
 
-.plant-card, .garden-card {
+#plant-card, #garden-card {
     padding: 1rem;
     box-shadow: 2px 5px 25px #0b104f14 !important;
     border-radius: 8px;
@@ -186,20 +186,30 @@ blockquote footer {
     list-style: none;
 }
 
-.plant-card a, .garden-card a {
+#plant-card a, #garden-card a {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
-.plant-card h3, .garden-card h3 {
+#plant-card h3, #garden-card h3 {
     margin-bottom: 0.25rem;
 }
 
-.plant-card:hover, .plant-card:focus-within,
-.garden-card:hover, .garden-card:focus-within {
+#plant-card:hover, #plant-card:focus-within,
+#garden-card:hover, #garden-card:focus-within {
     transform: translateY(-4px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Jardins */
+
+
+#garden-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
 }
 
 
@@ -224,29 +234,6 @@ blockquote footer {
     color: var(--color-primary);
     margin-bottom: 0.5rem;
 }
-#plant-details .plant-scientific-name {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 1rem;
-}
-#plant-details .plant-category {
-    background-color: var(--color-secondary);
-    color: white;
-    display: inline-block;
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-#plant-details .plant-info h3 {
-    margin-top: 1.5rem;
-    color: var(--color-dark);
-    font-size: 1.25rem;
-}
-#plant-details .plant-info p,
-#plant-details .plant-info ul {
-    margin-bottom: 1rem;
-}
 #plant-group {
     display: flex;
     justify-content: space-between;
@@ -260,7 +247,6 @@ blockquote footer {
     height: auto;
     border-radius: 10px;
 }
-
 
 /* FOOTER */
 
@@ -288,7 +274,6 @@ footer nav ul {
   gap: 1.5rem;
   flex-wrap: wrap;
 }
-
 
 /* Contact */
 
