@@ -121,6 +121,10 @@ button:hover {
     background-color: var(--color-secondary);
 }
 
+button h3 {
+    color: white;;
+}
+
 
 footer {
     margin-top: auto;
@@ -142,7 +146,7 @@ footer {
 /* Index.html */
 
 section {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 2rem auto;
   padding: 1rem;
   background-color: var(--color-accent);
@@ -179,12 +183,15 @@ blockquote footer {
 }
 
 .plant-card, .garden-card {
-    padding: 1rem;
+    padding: 2rem;
     box-shadow: 2px 5px 25px #0b104f14 !important;
     border-radius: 8px;
     background-color: var(--color-accent);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .plant-card a, .garden-card a {
@@ -203,6 +210,12 @@ blockquote footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+.plant-card button, .garden-card button {
+    display: flex;;
+    margin: 1rem auto;
+}
+
+
 /* Jardins */
 
 #gardens-map {
@@ -210,13 +223,6 @@ blockquote footer {
     height: 450px;
     margin: 2rem auto;
 }
-
-#map {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
 
 #garden-grid {
     display: grid;
@@ -232,20 +238,15 @@ blockquote footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     margin-bottom: 2rem;
 }
-/* .no-js #map {
-  display: none;
-} */
-
 /* plant-details */
 
 #plant-details {
     max-width: 800px;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: var(--var-ba);
+    background-color: var(--var-background);
     box-shadow: 2px 5px 25px #0b104f14 !important;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 #plant-details img {
     max-width: 100%;
