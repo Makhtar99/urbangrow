@@ -152,7 +152,7 @@ section {
 
 section a {
   text-decoration: underline;
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 blockquote {
