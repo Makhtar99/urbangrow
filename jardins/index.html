@@ -1,103 +1,119 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jardins - UrbanGrow</title>
-    <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <link rel="stylesheet" href="../assets/css/print.css" media="print">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Jardins - UrbanGrow</title>
+   <link rel="stylesheet" href="../assets/css/reset.css">
+   <link rel="stylesheet" href="../assets/css/main.css">
+   <link rel="stylesheet" href="../assets/css/print.css" media="print">
+   <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+   />
+   <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin=""
+   ></script>
 </head>
 <body>
-    <header>
-        <a href="../../index.html" aria-label="Page d'accueil UrbanGrow">
-            <img src="../assets/img/logo.webp" alt="Logo UrbanGrow" loading="lazy">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Accueil</a></li>
-                <li><a href="../plantes/index.html">Plantes</a></li>
-                <li><a href="index.html">Jardins</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+   <header>
+       <a href="../index.html" aria-label="Page d'accueil UrbanGrow">
+          <img src="../assets/img/logo.webp" alt="Logo UrbanGrow" loading="lazy" />
+      </a>
+      <nav>
+         <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../plantes/index.html">Plantes</a></li>
+            <li><a href="index.html" aria-current="page">Jardins</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+         </ul>
+      </nav>
+   </header>
+   <main>
+      <h1>Liste des jardins communautaires</h1>
+      <h2>Carte des jardins</h2>
+      <div id="map"></div>
+      <div id="gardens-list">
+         <ul id="garden-grid">
+            <li class="garden-card">
+               <div>
+                  <h3>Jardin Truillot - <strong>Paris 11e</strong></h3>
+                  <p>1 Rue du Chemin Vert, 75011 Paris</p>
+                  <p><strong>ouverture :</strong> Tous les jours de 8h à 21h</p>
+                  <p>Un jardin public repensé en espace partagé, au cœur d’un quartier vivant et végétalisé.</p>
+               </div>
+               <button>
+                  <a href="https://www.google.com/maps/place/48.8696,2.3813" target="_blank">
+                     <h3>Voir sur la carte</h3>
+                  </a>
+               </button>
+            </li>
 
-    <main>
-        <h1>Liste des jardins communautaires</h1>
+            <li class="garden-card">
+               <div>
+                  <h3>Jardin partagé Case Nègre - <strong>Ivry-sur-Seine</strong></h3>
+                  <p><strong>ouverture :</strong> Mercredi, samedi et dimanche de 10h à 18h</p>
+                  <p>Rue Marcel Hartmann, 94200 Ivry-sur-Seine</p>
+                  <p>Lieu d’échange et de transmission autour de la culture potagère urbaine.</p>
+               </div>
+               <button>
+                  <a href="https://www.google.com/maps/place/48.8254,2.3641" target="_blank">
+                     <h3>Voir sur la carte</h3>
+                  </a>
+               </button>
+            </li>
 
-        <div id="gardens-map">
-            <h2>Carte des jardins</h2>
-            <iframe
-                id="map"
-                title="Carte des jardins communautaires"
-                loading="lazy"
-                allowfullscreen
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999128204072!2d2.3499020156734767!3d48.85661407928764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2a7c3%3A0xf89b1f9b6dca8b96!2s15%20Rue%20des%20Fleurs%2C%2075020%20Paris!5e0!3m2!1sfr!2sfr!4v1710000000000">
-            </iframe>
-        </div>
+            <li class="garden-card">
+               <div>
+                  <h3>Le Ver Têtu - <strong>Paris 19e</strong></h3>
+                  <p><strong>ouverture :</strong> Tous les jours de 9h à 20h</p>
+                  <p>Rue des Lilas, 75019 Paris</p>
+                  <p>Un havre de verdure animé par des bénévoles pour cultiver, composter et se retrouver.</p>
+               </div>
+               <button>
+                  <a href="https://www.google.com/maps/place/48.8861,2.3827" target="_blank">
+                     <h3>Voir sur la carte</h3>
+                  </a>
+               </button>
+            </li>
 
-        <div id="gardens-list">
-            <ul id="garden-grid">
-                <li class="garden-card">
-                    <a href="https://www.google.com/maps/place/48%C2%B051'23.8%22N+2%C2%B021'07.9%22E/@48.8517983,2.3639131,13.25z/data=!4m4!3m3!8m2!3d48.8566111!4d2.3521944?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank">
-                        <h3>Jardin Communautaire des Lilas</h3>
-                        <p><strong>ouverture :</strong> Tous les jours de 8h à 20h </p>
-                        <p>"15 Rue des Fleurs, 75020 Paris</p>
-                        <p>Un espace convivial où les habitants du quartier cultivent ensemble légumes, fruits et fleurs
-                           dans une démarche écologique.</p>
-                     </a>
-                </li>
-    
-                <li class="garden-card">
-                    <a href="https://www.google.com/maps/place/45%C2%B045'28.1%22N+4%C2%B049'55.2%22E/@45.7569439,4.8413574,12z/data=!4m4!3m3!8m2!3d45.7578056!4d4.832?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank">
-                        <h3>Potager Urbain Collectif</h3>
-                        <p>42 Avenue des Jardins, 69001 Lyon</p>
-                        <p><strong>ouverture :</strong> Du mardi au dimanche de 9h à 19h </p>
-                        <p>Créé en 2015, ce jardin partagé propose des parcelles individuelles et collectives, ainsi que
-                           des ateliers de jardinage.</p>
-                     </a>
-                </li>
-    
-                <li class="garden-card">
-                    <a href="https://www.google.com/maps/place/44%C2%B050'16.1%22N+0%C2%B034'45.1%22W/@44.819129,-0.603274,12z/data=!4m4!3m3!8m2!3d44.8378056!4d-0.5791944?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank">
-                        <h3>Les Jardins de la Solidarité</h3>
-                        <p><strong>ouverture :</strong> Lundi, mercredi et samedi de 10h à 17h </p>
-                        <p>8 Rue de l'Entraide, 33000 Bordeaux</p>
-                        <p>Un projet social qui permet aux personnes en situation précaire de cultiver leurs propres
-                           légumes et de créer du lien social.</p>
-                     </a>
-                </li>
-    
-                <li class="garden-card">
-                    <a href="https://www.google.com/maps/place/43%C2%B017'47.4%22N+5%C2%B022'11.3%22E/@43.2931038,5.3744234,14z/data=!4m4!3m3!8m2!3d43.2965!4d5.3698056?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank">
-                        <h3>Oasis Verte</h3>
-                        <p><strong>ouverture :</strong> Tous les jours de 7h à 21h </p>
-                        <p>23 Boulevard de l'Écologie, 13001 Marseille</p>
-                        <p>Un espace vert au cœur de la ville qui propose des parcelles partagées et organise des
-                           événements autour de la permaculture.</p>
-                     </a>
-                </li>
-    
-                <li class="garden-card">
-                    <a href="https://www.google.com/maps/place/50%C2%B037'45.1%22N+3%C2%B003'26.3%22E/@50.6320088,3.058934,14.25z/data=!4m4!3m3!8m2!3d50.6291944!4d3.0573056?authuser=0&entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank">
-                        <h3>Jardin du Partage</h3>
-                        <p><strong>ouverture :</strong> Du mercredi au dimanche de 9h à 18h</p>
-                        <p>56 Rue des Semis, 59000 Lille</p>
-                        <p>Un jardin intergénérationnel où enfants, adultes et seniors jardinent ensemble et partagent
-                           leurs connaissances.</p>
-                     </a>
-                </li>
-            </ul>
-        </div>
-    </main>
+            <li class="garden-card">
+               <div>
+                  <h3>Jardin partagé des Figuiers - <strong>Saint-Ouen-sur-Seine</strong></h3>
+                  <p><strong>ouverture :</strong> Mardi, jeudi et samedi de 14h à 19h</p>
+                  <p>12 Rue des Figuiers, 93400 Saint-Ouen</p>
+                  <p>Un jardin collectif en bord de Seine, axé sur la biodiversité et les plantations comestibles.</p>
+               </div>
+               <button>
+                  <a href="https://www.google.com/maps/place/48.8947,2.3348" target="_blank">
+                     <h3>Voir sur la carte</h3>
+                  </a>
+               </button>
+            </li>
 
-    
-    <footer role="contentinfo">
-        <p>&copy; 2025 UrbanGrow — Cultivons la ville ensemble.</p>
-      
-        <nav aria-label="Réseaux sociaux">
-          <ul>
+            <li class="garden-card">
+              <div>
+                <h3>Le Petit Pré Vert - <strong>Paris 15e</strong></h3>
+                  <p><strong>ouverture :</strong> Week-ends et jours fériés de 10h à 17h</p>
+                  <p>16 Rue de la Convention, 75015 Paris</p>
+                  <p>Mini-potager urbain et espace pédagogique pour les écoles du quartier.</p>
+              </div>
+               <button>
+                  <a href="https://www.google.com/maps/place/48.8485,2.3089" target="_blank">
+                     <h3>Voir sur la carte</h3>
+                  </a>
+               </button>
+            </li>
+         </ul>
+      </div>
+   </main>
+   <footer role="contentinfo">
+      <p>&copy; 2025 UrbanGrow — Cultivons la ville ensemble.</p>
+
+      <nav aria-label="Réseaux sociaux">
+         <ul>
             <li><a href="#" aria-label="Page Facebook UrbanGrow">Facebook</a></li>
             <li><a href="#" aria-label="Profil Instagram UrbanGrow">Instagram</a></li>
             <li><a href="#" aria-label="Chaîne YouTube UrbanGrow">YouTube</a></li>
@@ -110,14 +126,64 @@
             <li><a href="#">Mentions légales</a></li>
             <li><a href="#">Accessibilité</a></li>
             <li><a href="#">Données personnelles</a></li>
-          </ul>
-        </nav>
-      </footer>
-      
-      
-          <script src="assets/js/main.js"></script>
-          <script src="assets/js/no-js-fallbacks.js"></script>
-      </body>
-      
-      
-      </html>
+         </ul>
+      </nav>
+   </footer>
+
+
+
+   <script src="../assets/js/main.js"></script>
+</body>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const map = L.map('map').setView([48.851890563964844,2.4209344387054443], 5.5);
+var circle = L.circle([48.851890563964844,2.4209344387054443], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500,
+   }).addTo(map);
+
+
+  L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap',
+    minZoom: 10,
+    maxZoom: 20,
+  }).addTo(map);
+
+  const gardens = [
+  {
+    name: "Jardin Truillot - Paris 11e",
+    coords: [48.8566, 2.3706]
+  },
+  {
+    name: "Jardin partagé Case Nègre - Ivry-sur-Seine",
+    coords: [48.8156, 2.3881]
+  },
+  {
+    name: "Le Ver Têtu - Paris 19e",
+    coords: [48.8825, 2.3987]
+  },
+  {
+    name: "Jardin partagé des Figuiers - Saint-Ouen",
+    coords: [48.9102, 2.3342]
+  },
+  {
+    name: "Le Petit Pré Vert - Paris 15e",
+    coords: [48.8421, 2.2897]
+  }
+];
+
+
+  gardens.forEach(garden => {
+    L.marker(garden.coords)
+      .addTo(map)
+      .bindPopup(`<strong>${garden.name}</strong>`);
+  });
+});
+</script>
+
+
+
+</html>
