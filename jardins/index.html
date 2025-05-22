@@ -10,7 +10,9 @@
 </head>
 <body>
     <header>
-        <h1>UrbanGrow</h1>
+        <a href="/index.html" aria-label="Page d'accueil UrbanGrow">
+            <img src="/assets/img/logo.webp" alt="Logo UrbanGrow" loading="lazy">
+        </a>
         <nav>
             <ul>
                 <li><a href="../index.html">Accueil</a></li>
@@ -22,14 +24,13 @@
     </header>
 
     <main>
-        <h2>Jardins communautaires</h2>
+        <h1>Liste des jardins communautaires</h1>
 
         <div id="gardens-map">
-            <iframe 
+            <h2>Carte des jardins</h2>
+            <iframe
+                id="map"
                 title="Carte des jardins communautaires"
-                width="100%" 
-                height="450" 
-                style="border:0" 
                 loading="lazy"
                 allowfullscreen
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999128204072!2d2.3499020156734767!3d48.85661407928764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2a7c3%3A0xf89b1f9b6dca8b96!2s15%20Rue%20des%20Fleurs%2C%2075020%20Paris!5e0!3m2!1sfr!2sfr!4v1710000000000">
@@ -37,49 +38,76 @@
         </div>
 
         <div id="gardens-list">
-            <article>
-                <h3>Jardin Communautaire des Lilas</h3>
-                <p><strong>Adresse :</strong> 15 Rue des Fleurs, 75020 Paris</p>
-                <p><strong>Description :</strong> Un espace convivial où les habitants du quartier cultivent ensemble légumes, fruits et fleurs dans une démarche écologique.</p>
-                <p><strong>Horaires :</strong> Tous les jours de 8h à 20h</p>
-                <p><strong>Contact :</strong> jardindeslias@example.com</p>
-            </article>
-
-            <article>
-                <h3>Potager Urbain Collectif</h3>
-                <p><strong>Adresse :</strong> 42 Avenue des Jardins, 69001 Lyon</p>
-                <p><strong>Description :</strong> Créé en 2015, ce jardin partagé propose des parcelles individuelles et collectives, ainsi que des ateliers de jardinage.</p>
-                <p><strong>Horaires :</strong> Du mardi au dimanche de 9h à 19h</p>
-                <p><strong>Contact :</strong> potager.urbain@example.com</p>
-            </article>
-
-            <article>
-                <h3>Les Jardins de la Solidarité</h3>
-                <p><strong>Adresse :</strong> 8 Rue de l'Entraide, 33000 Bordeaux</p>
-                <p><strong>Description :</strong> Un projet social qui permet aux personnes en situation précaire de cultiver leurs propres légumes et de créer du lien social.</p>
-                <p><strong>Horaires :</strong> Lundi, mercredi et samedi de 10h à 17h</p>
-                <p><strong>Contact :</strong> solidarite.jardins@example.com</p>
-            </article>
-
-            <article>
-                <h3>Oasis Verte</h3>
-                <p><strong>Adresse :</strong> 23 Boulevard de l'Écologie, 13001 Marseille</p>
-                <p><strong>Description :</strong> Un espace vert au cœur de la ville qui propose des parcelles partagées et organise des événements autour de la permaculture.</p>
-                <p><strong>Horaires :</strong> Tous les jours de 7h à 21h</p>
-                <p><strong>Contact :</strong> oasis.verte@example.com</p>
-            </article>
-
-            <article>
-                <h3>Jardin du Partage</h3>
-                <p><strong>Adresse :</strong> 56 Rue des Semis, 59000 Lille</p>
-                <p><strong>Description :</strong> Un jardin intergénérationnel où enfants, adultes et seniors jardinent ensemble et partagent leurs connaissances.</p>
-                <p><strong>Horaires :</strong> Du mercredi au dimanche de 9h à 18h</p>
-                <p><strong>Contact :</strong> jardin.partage@example.com</p>
-            </article>
+            <ul id="garden-grid">
+                <li class="garden-card">
+                    <h3>Jardin Communautaire des Lilas</h3>
+                    <p><strong>Adresse :</strong> 15 Rue des Fleurs, 75020 Paris</p>
+                    <p><strong>Description :</strong> Un espace convivial où les habitants du quartier cultivent ensemble légumes, fruits et fleurs dans une démarche écologique.</p>
+                    <p><strong>Horaires :</strong> Tous les jours de 8h à 20h</p>
+                    <p><strong>Contact :</strong> jardindeslias@example.com</p>
+                </li>
+    
+                <li class="garden-card">
+                    <h3>Potager Urbain Collectif</h3>
+                    <p><strong>Adresse :</strong> 42 Avenue des Jardins, 69001 Lyon</p>
+                    <p><strong>Description :</strong> Créé en 2015, ce jardin partagé propose des parcelles individuelles et collectives, ainsi que des ateliers de jardinage.</p>
+                    <p><strong>Horaires :</strong> Du mardi au dimanche de 9h à 19h</p>
+                    <p><strong>Contact :</strong> potager.urbain@example.com</p>
+                </li>
+    
+                <li class="garden-card">
+                    <h3>Les Jardins de la Solidarité</h3>
+                    <p><strong>Adresse :</strong> 8 Rue de l'Entraide, 33000 Bordeaux</p>
+                    <p><strong>Description :</strong> Un projet social qui permet aux personnes en situation précaire de cultiver leurs propres légumes et de créer du lien social.</p>
+                    <p><strong>Horaires :</strong> Lundi, mercredi et samedi de 10h à 17h</p>
+                    <p><strong>Contact :</strong> solidarite.jardins@example.com</p>
+                </li>
+    
+                <li class="garden-card">
+                    <h3>Oasis Verte</h3>
+                    <p><strong>Adresse :</strong> 23 Boulevard de l'Écologie, 13001 Marseille</p>
+                    <p><strong>Description :</strong> Un espace vert au cœur de la ville qui propose des parcelles partagées et organise des événements autour de la permaculture.</p>
+                    <p><strong>Horaires :</strong> Tous les jours de 7h à 21h</p>
+                    <p><strong>Contact :</strong> oasis.verte@example.com</p>
+                </li>
+    
+                <li class="garden-card">
+                    <h3>Jardin du Partage</h3>
+                    <p><strong>Adresse :</strong> 56 Rue des Semis, 59000 Lille</p>
+                    <p><strong>Description :</strong> Un jardin intergénérationnel où enfants, adultes et seniors jardinent ensemble et partagent leurs connaissances.</p>
+                    <p><strong>Horaires :</strong> Du mercredi au dimanche de 9h à 18h</p>
+                    <p><strong>Contact :</strong> jardin.partage@example.com</p>
+                </li>
+            </ul>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 UrbanGrow</p>
-        <a href="../accessibility.html">Accessibilité</a>
-    </footer>  
+    
+    <footer role="contentinfo">
+        <p>&copy; 2025 UrbanGrow — Cultivons la ville ensemble.</p>
+      
+        <nav aria-label="Réseaux sociaux">
+          <ul>
+            <li><a href="#" aria-label="Page Facebook UrbanGrow">Facebook</a></li>
+            <li><a href="#" aria-label="Profil Instagram UrbanGrow">Instagram</a></li>
+            <li><a href="#" aria-label="Chaîne YouTube UrbanGrow">YouTube</a></li>
+            <li><a href="#" aria-label="Profil Twitter UrbanGrow">Twitter</a></li>
+          </ul>
+        </nav>
+      
+        <nav aria-label="Informations légales">
+          <ul>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Accessibilité</a></li>
+            <li><a href="#">Données personnelles</a></li>
+          </ul>
+        </nav>
+      </footer>
+      
+      
+          <script src="assets/js/main.js"></script>
+          <script src="assets/js/no-js-fallbacks.js"></script>
+      </body>
+      
+      
+      </html>
