@@ -31,8 +31,21 @@ main {
     border-bottom: 1px var(--color-secondary) solid;
 }
 
+main h1, #main-text {
+    text-align: center;
+}
+
 header {
     padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
 }
 
 nav ul {
@@ -85,7 +98,8 @@ label {
 input, textarea {
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #ccc;
+    background-color: #FFF;
+    border: 1px solid var(--color-dark);
     border-radius: 4px;
 }
 
@@ -124,71 +138,82 @@ footer {
         min-height: 44px;
     }
 }
+/* Index.html */
 
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: var(--color-accent);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
 
-.plants-grid, .gardens-grid {
+section a {
+  text-decoration: underline;
+  color: var(--color-secondary);
+}
+
+blockquote {
+  font-size: 18px;
+  font-style: italic;
+  margin: 1rem 0;
+  padding-left: 1rem;
+  border-left: 4px solid var(--color-primary);
+  border-right: 4px solid var(--color-primary);
+}
+
+blockquote footer {
+    padding: 0 2rem;
+    text-align: right;
+}
+
+/* Plant / Jardin */
+
+#plant-grid, #garden-grid {
     display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    padding: 1rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+#plant-card, #garden-card {
+    padding: 1rem;
+    box-shadow: 2px 5px 25px #0b104f14 !important;
+    border-radius: 8px;
+    background-color: var(--color-accent);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     list-style: none;
 }
 
-.plant-card, .garden-card {
-    background-color: #fff;
-    padding: 1rem;
-    min-height: 200px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+#plant-card a, #garden-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
-.plant-card:hover, .plant-card:focus-within,
-.garden-card:hover, .garden-card:focus-within {
+#plant-card h3, #garden-card h3 {
+    margin-bottom: 0.25rem;
+}
+
+#plant-card:hover, #plant-card:focus-within,
+#garden-card:hover, #garden-card:focus-within {
     transform: translateY(-4px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.plant-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
+/* Jardins */
 
-.plant-card img {
-    width: 200px;
-    height: 200px;
-    display: block;
-}
 
-.plant-card figcaption,
-.garden-card article {
-    padding: 1rem;
-}
-
-.plant-card h3,
-.garden-card h3 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.2rem;
-    color: var(--color-dark);
+#garden-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
 }
 
 
-.plant-link:focus,
-.garden-card article:focus {
-    outline: 3px solid var(--color-secondary);
-    outline-offset: 2px;
-}
-
-.plant-link:focus,
-.plant-link:hover {
-  outline: 2px solid var(--color-secondary);
-  outline-offset: 2px;
-}
-
-
-/* details */
+/* plant-details */
 
 #plant-details {
     max-width: 800px;
@@ -203,35 +228,24 @@ footer {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 1.5rem;
 }
 #plant-details h2 {
     font-size: 2rem;
     color: var(--color-primary);
     margin-bottom: 0.5rem;
 }
-#plant-details .plant-scientific-name {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 1rem;
+#plant-group {
+    display: flex;
+    justify-content: space-between;
 }
-#plant-details .plant-category {
-    background-color: var(--color-secondary);
-    color: white;
-    display: inline-block;
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+#plant-img-details {
+    display: flex;
+    align-items: center;
 }
-#plant-details .plant-info h3 {
-    margin-top: 1.5rem;
-    color: var(--color-dark);
-    font-size: 1.25rem;
-}
-#plant-details .plant-info p,
-#plant-details .plant-info ul {
-    margin-bottom: 1rem;
+#plant-img-details img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
 }
 
 /* FOOTER */
@@ -259,4 +273,20 @@ footer nav ul {
   justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
+}
+
+/* Contact */
+
+#contact-form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form button {
+    max-width: 100px;
+    margin: auto;
+}#form-group {
+    margin-bottom: 1rem;
+    text-align: left;
 }

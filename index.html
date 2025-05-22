@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="assets/css/print.css" media="print">
 </head>
 <body>
-    <header style="display: flex; justify-content: space-between; align-items: center; ">
-        <a href="index.html" aria-label="Page d'accueil UrbanGrow" style="cursor: pointer;">
-            <img src="./assets/img/logo.webp" alt="Logo UrbanGrow" style="width: 100px; height: auto;" loading="lazy">
+    <header>
+        <a href="index.html" aria-label="Page d'accueil UrbanGrow">
+            <img src="./assets/img/logo.webp" alt="Logo UrbanGrow" loading="lazy">
         </a>
         <nav>
             <ul>
@@ -23,10 +23,37 @@
         </nav>
     </header>
     <main>
-        <div style="display: flex; flex-direction: column; align-items: center;">
+        <div>
             <h1>Bienvenue sur UrbanGrow</h1>
-            <p>Votre ressource pour le jardinage urbain, durable et collectif.</p>
+            <p id="main-text">Votre ressource pour le jardinage urbain, durable et collectif.</p>
         </div>
+        <section aria-labelledby="titre-ete">
+  <h2 id="titre-ete">🌿 L’été, une saison fertile</h2>
+  <article>
+    <p>L’été est une période idéale pour cultiver de nombreuses variétés de plantes. Avec un ensoleillement optimal et des températures souvent élevées, de nombreuses espèces comme les <a href="./plantes/details/tomate_cerise.html"><strong>tomates cerises</strong></a>, les <a href="./plantes/details/poivron.html"><strong>poivrons</strong></a>, ou encore les <a href="./plantes/details/courgette.html"><strong>courgettes</strong></a> s’épanouissent rapidement.</p>
+
+    <p>C’est aussi le moment parfait pour semer des <strong>herbes aromatiques</strong> telles que le basilic, la menthe ou la ciboulette. Elles demandent peu d’entretien, et sont idéales pour une culture en pot sur balcon ou en pleine terre.</p>
+
+    <p>Attention cependant à l’arrosage, car l’évaporation est rapide : privilégiez des arrosages tôt le matin ou en soirée, et évitez de mouiller les feuilles pour limiter les maladies fongiques.</p>
+  </article>
+</section>
+
+<section aria-labelledby="citations-jardinage">
+  <h2 id="citations-jardinage">🌼 Citations sur le jardinage</h2>
+  <blockquote lang="fr">
+    <p>« Celui qui plante un jardin plante le bonheur. »</p>
+    <footer>— Proverbe chinois</footer>
+  </blockquote>
+  <blockquote lang="fr">
+    <p>« Si l'herbe est plus verte dans le jardin de ton voisin, laisse-le s'emmerder à la tondre. »</p>
+    <footer>— Fred Allen</footer>
+  </blockquote>
+  <blockquote lang="fr">
+    <p>« L'amour a un jardin si secret que l'on s'envole quelques fois. »</p>
+    <footer>— Sonia Lahsaini</footer>
+  </blockquote>
+</section>
+
     </main>
 <footer role="contentinfo">
   <p>&copy; 2025 UrbanGrow — Cultivons la ville ensemble.</p>
