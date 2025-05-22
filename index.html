@@ -10,10 +10,12 @@
 </head>
 <body>
     <header>
-        <h1>UrbanGrow</h1>
+        <a href="index.html" aria-label="Page d'accueil UrbanGrow">
+            <img src="./assets/img/logo.webp" alt="Logo UrbanGrow" loading="lazy">
+        </a>
         <nav>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html" aria-current="page">Accueil</a></li>
                 <li><a href="plantes/index.html">Plantes</a></li>
                 <li><a href="jardins/index.html">Jardins</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -21,14 +23,63 @@
         </nav>
     </header>
     <main>
-        <h2>Bienvenue sur UrbanGrow</h2>
-        <p>Votre ressource pour le jardinage urbain.</p>
+        <div>
+            <h1>Bienvenue sur UrbanGrow</h1>
+            <p id="main-text">Votre ressource pour le jardinage urbain, durable et collectif.</p>
+        </div>
+        <section aria-labelledby="titre-ete">
+  <h2 id="titre-ete">🌿 L’été, une saison fertile</h2>
+  <article>
+    <p>L’été est une période idéale pour cultiver de nombreuses variétés de plantes. Avec un ensoleillement optimal et des températures souvent élevées, de nombreuses espèces comme les <a href="./plantes/details/tomate_cerise.html"><strong>tomates cerises</strong></a>, les <a href="./plantes/details/poivron.html"><strong>poivrons</strong></a>, ou encore les <a href="./plantes/details/courgette.html"><strong>courgettes</strong></a> s’épanouissent rapidement.</p>
+
+    <p>C’est aussi le moment parfait pour semer des <strong>herbes aromatiques</strong> telles que le basilic, la menthe ou la ciboulette. Elles demandent peu d’entretien, et sont idéales pour une culture en pot sur balcon ou en pleine terre.</p>
+
+    <p>Attention cependant à l’arrosage, car l’évaporation est rapide : privilégiez des arrosages tôt le matin ou en soirée, et évitez de mouiller les feuilles pour limiter les maladies fongiques.</p>
+  </article>
+</section>
+
+<section aria-labelledby="citations-jardinage">
+  <h2 id="citations-jardinage">🌼 Citations sur le jardinage</h2>
+  <blockquote lang="fr">
+    <p>« Celui qui plante un jardin plante le bonheur. »</p>
+    <footer>— Proverbe chinois</footer>
+  </blockquote>
+  <blockquote lang="fr">
+    <p>« Si l'herbe est plus verte dans le jardin de ton voisin, laisse-le s'emmerder à la tondre. »</p>
+    <footer>— Fred Allen</footer>
+  </blockquote>
+  <blockquote lang="fr">
+    <p>« L'amour a un jardin si secret que l'on s'envole quelques fois. »</p>
+    <footer>— Sonia Lahsaini</footer>
+  </blockquote>
+</section>
+
     </main>
-    <footer>
-        <p>&copy; 2025 UrbanGrow</p>
-        <a href="accessibility.html">Accessibilité</a>
-    </footer>
+<footer role="contentinfo">
+  <p>&copy; 2025 UrbanGrow — Cultivons la ville ensemble.</p>
+
+  <nav aria-label="Réseaux sociaux">
+    <ul>
+      <li><a href="#" aria-label="Page Facebook UrbanGrow">Facebook</a></li>
+      <li><a href="#" aria-label="Profil Instagram UrbanGrow">Instagram</a></li>
+      <li><a href="#" aria-label="Chaîne YouTube UrbanGrow">YouTube</a></li>
+      <li><a href="#" aria-label="Profil Twitter UrbanGrow">Twitter</a></li>
+    </ul>
+  </nav>
+
+  <nav aria-label="Informations légales">
+    <ul>
+      <li><a href="#">Mentions légales</a></li>
+      <li><a href="#">Accessibilité</a></li>
+      <li><a href="#">Données personnelles</a></li>
+    </ul>
+  </nav>
+</footer>
+
+
     <script src="assets/js/main.js"></script>
     <script src="assets/js/no-js-fallbacks.js"></script>
 </body>
+
+
 </html>
