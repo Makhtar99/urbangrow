@@ -31,7 +31,7 @@ main {
     border-bottom: 1px var(--color-secondary) solid;
 }
 
-main h1 {
+main h1, #main-text {
     text-align: center;
 }
 
@@ -44,6 +44,8 @@ header {
 
 header img {
     cursor: pointer;
+    width: 100px;
+    height: 100px;
 }
 
 nav ul {
@@ -147,23 +149,35 @@ section {
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
+section a {
+  text-decoration: underline;
+  color: var(--color-secondary);
+}
+
 blockquote {
+  font-size: 18px;
   font-style: italic;
   margin: 1rem 0;
   padding-left: 1rem;
   border-left: 4px solid var(--color-primary);
+  border-right: 4px solid var(--color-primary);
+}
+
+blockquote footer {
+    padding: 0 2rem;
+    text-align: right;
 }
 
 /* Plant / Jardin */
 
-.plant-grid, .garden-grid {
+#plant-grid, #garden-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
     padding: 2rem;
 }
 
-.plant-card, .garden-card {
+#plant-card, #garden-card {
     padding: 1rem;
     box-shadow: 2px 5px 25px #0b104f14 !important;
     border-radius: 8px;
@@ -172,20 +186,30 @@ blockquote {
     list-style: none;
 }
 
-.plant-card a, .garden-card a {
+#plant-card a, #garden-card a {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
-.plant-card h3, .garden-card h3 {
+#plant-card h3, #garden-card h3 {
     margin-bottom: 0.25rem;
 }
 
-.plant-card:hover, .plant-card:focus-within,
-.garden-card:hover, .garden-card:focus-within {
+#plant-card:hover, #plant-card:focus-within,
+#garden-card:hover, #garden-card:focus-within {
     transform: translateY(-4px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Jardins */
+
+
+#garden-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
 }
 
 
@@ -204,38 +228,25 @@ blockquote {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 1.5rem;
 }
 #plant-details h2 {
     font-size: 2rem;
     color: var(--color-primary);
     margin-bottom: 0.5rem;
 }
-#plant-details .plant-scientific-name {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 1rem;
+#plant-group {
+    display: flex;
+    justify-content: space-between;
 }
-#plant-details .plant-category {
-    background-color: var(--color-secondary);
-    color: white;
-    display: inline-block;
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+#plant-img-details {
+    display: flex;
+    align-items: center;
 }
-#plant-details .plant-info h3 {
-    margin-top: 1.5rem;
-    color: var(--color-dark);
-    font-size: 1.25rem;
+#plant-img-details img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
 }
-#plant-details .plant-info p,
-#plant-details .plant-info ul {
-    margin-bottom: 1rem;
-}
-
-
 
 /* FOOTER */
 
@@ -264,7 +275,6 @@ footer nav ul {
   flex-wrap: wrap;
 }
 
-
 /* Contact */
 
 #contact-form {
@@ -276,8 +286,7 @@ footer nav ul {
 #contact-form button {
     max-width: 100px;
     margin: auto;
-}
-.form-group {
+}#form-group {
     margin-bottom: 1rem;
     text-align: left;
 }
