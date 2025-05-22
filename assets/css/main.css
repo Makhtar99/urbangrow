@@ -31,7 +31,8 @@ main {
     border-bottom: 1px var(--color-secondary) solid;
 }
 
-main h1, #main-text {
+main h1, main h2, #main-text {
+    margin-bottom: 1rem;
     text-align: center;
 }
 
@@ -177,7 +178,7 @@ blockquote footer {
     padding: 2rem;
 }
 
-#plant-card, #garden-card {
+.plant-card, .garden-card {
     padding: 1rem;
     box-shadow: 2px 5px 25px #0b104f14 !important;
     border-radius: 8px;
@@ -186,23 +187,35 @@ blockquote footer {
     list-style: none;
 }
 
-#plant-card a, #garden-card a {
+.plant-card a, .garden-card a {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
-#plant-card h3, #garden-card h3 {
+.plant-card h3, .garden-card h3 {
     margin-bottom: 0.25rem;
 }
 
-#plant-card:hover, #plant-card:focus-within,
-#garden-card:hover, #garden-card:focus-within {
+.plant-card:hover, .plant-card:focus-within,
+.garden-card:hover, .garden-card:focus-within {
     transform: translateY(-4px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Jardins */
+
+#gardens-map {
+    max-width: 80%;
+    height: 450px;
+    margin: 2rem auto;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
 
 
 #garden-grid {
